@@ -1,6 +1,7 @@
 <?php
+require __DIR__ . '/../vendor/autoload.php';
 
-include('TimeUtils.php');
+use App\TimeUtils;
 use PHPUnit\Framework\TestCase;
 
 class TimeUtilsTest extends TestCase {

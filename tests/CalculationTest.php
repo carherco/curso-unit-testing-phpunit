@@ -1,6 +1,7 @@
 <?php
+require __DIR__ . '/../vendor/autoload.php';
 
-include('Calculation.php');
+use App\Calculation;
 use PHPUnit\Framework\TestCase;
 
 class CalculationTest extends TestCase {

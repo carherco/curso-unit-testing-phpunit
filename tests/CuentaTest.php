@@ -1,6 +1,7 @@
 <?php
+require __DIR__ . '/../vendor/autoload.php';
 
-include('Cuenta.php');
+use App\Cuenta;
 use PHPUnit\Framework\TestCase;
 
 

@@ -1,5 +1,7 @@
 <?php 
 
+namespace App;
+
 class Calculation {  
   	
 	// input: [2, 6, 9], output: 9

@@ -1,6 +1,6 @@
 <?php
 
-include('Customer.php');
+use App\Customer;
 use PHPUnit\Framework\TestCase;
 
 class CustomerTest extends TestCase {
