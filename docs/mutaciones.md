@@ -21,15 +21,14 @@ Uno de los aspectos más importantes en los test de mutaciones es su configuraci
 
 - El segundo elemento es el tipo de mutaciones que queremos que sufra nuestro código. Hay mutaciones más de tipo matemático, en el que se reemplazan unos operadores aritméticos por otros; otros cambian las condiciones en un if; otros hacen que los return se devuelvan vacíos…
 
-Aquí podemos ver el tipo de reportes que sacan las herramietnas de tests de mutado.
+Métricas:
 
-![Reporte Pit Test](./images/pitest.png "Reporte Pit Test")
+- Mutation Score Indicator (MSI): 47%
+- Mutation Code Coverage: 67%
+- Covered Code MSI: 70%
 
-![Reporte Pit Test](./images/pitest2.png "Reporte Pit Test")
-
-
-Imágenes obtenidas de: https://www.paradigmadigital.com/dev/test-mutaciones/
+https://infection.github.io/guide/#Mutation-Score-Indicator-MSI
 
 ## Herramientas
 
-- Pit Test (en eclipse: Pitclipse a través del Marketplace)
+- Infection

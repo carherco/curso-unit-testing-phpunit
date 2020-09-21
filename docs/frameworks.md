@@ -1,5 +1,5 @@
-Frameworks de Mocks en Java
----------------------------
+Frameworks de Mocks en PHP
+--------------------------
 
 Existen varios frameworks que nos facilitan la creación de mocks y testeo con ellos. Mockito es la más utilizada actualmente.
 

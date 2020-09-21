@@ -13,6 +13,23 @@ Son aquellos tests que programamos sin mirar el código fuente del elemento que 
 
 Para programar este tipo de tests nos tienen que decir cuál es el comportamiento esperado del elemento que hay que testear.
 
+Funciones puras
+---------------
+
+En programación, se denomina función pura a aquella función que tiene las siguientes 2 propiedades: 
+
+- Para los mismos parámetros de entrada, la función siempre devolverá el mismo resultado.
+
+- No tiene efectos colaterales (side effects).
+
+Una función no será pura si:
+
+- utiliza variables estáticas
+- utiliza variables externas
+- utiliza información que no está en los argumentos de entrada (la hora del sistema, datos de una base de datos, datos en un fichero ...)
+- interactúa con sistemas externos (escribe en ficheros, escribe en base de datos, envía correos, escribe en sistema de log ...)
+- muta los argumentos de entrada o cualquier otra variable
+- utilizar algún tipo de aleatoriedad
 
 Query function
 --------------

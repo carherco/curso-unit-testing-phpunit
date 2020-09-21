@@ -1,8 +1,8 @@
 Introducción
 ============
 
-Definición
-----------
+Definiciones
+------------
 
 **In software testing, test automation is the use of software separate from the software being tested to control the execution of tests and the comparison of actual outcomes with predicted outcomes.**
 
@@ -18,18 +18,21 @@ Tipos de tests
 --------------
 
 - Unitarios
-- Funcionales
 - De integración
+- De aceptación
 - De usuario
 - De usabilidad
 - De stress
 - ...
+
+https://es.wikipedia.org/wiki/Pruebas_de_software
 
 Herramientas de testeo unitario
 -------------------------------
 
 Cada lenguaje de programación tiene su framework de testeo unitario. Todos tiene su origen en SUnit: https://en.wikipedia.org/wiki/SUnit.
 
-En Java este framework es **JUnit**
+- En PHP: PhpUnit
+- En JS: Jasmine / Jest
 
 
