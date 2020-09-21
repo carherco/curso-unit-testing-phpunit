@@ -1,7 +1,7 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
-use App\Calculation;
+use App\Misc\Calculation;
 use PHPUnit\Framework\TestCase;
 
 class CalculationTest extends TestCase {
