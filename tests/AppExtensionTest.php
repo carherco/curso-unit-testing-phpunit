@@ -7,7 +7,7 @@ use App\AppExtension;
 class AppExtensionTest extends TestCase 
 {
   public function testSfCalculator() {
-    $myClass = new AppExtension();
+    $myClass = new AppExtension(null);
 
     $input = 100;
     $expectedOutput = 21;
@@ -18,7 +18,7 @@ class AppExtensionTest extends TestCase
   }
 
   public function testSfCalculator2() {
-    $myClass = new AppExtension();
+    $myClass = new AppExtension(null);
 
     $input = 1;
     $expectedOutput = 21;
@@ -29,7 +29,7 @@ class AppExtensionTest extends TestCase
   }
 
   public function testSfCalculator3() {
-    $myClass = new AppExtension();
+    $myClass = new AppExtension(null);
 
     $input = 1.25;
     $expectedOutput = 20.75;
@@ -40,7 +40,7 @@ class AppExtensionTest extends TestCase
   }
 
   public function testSfCalculator4() {
-    $myClass = new AppExtension();
+    $myClass = new AppExtension(null);
 
     $input = 17.01;
     $expectedOutput = 20.99;
@@ -51,7 +51,7 @@ class AppExtensionTest extends TestCase
   }
 
   public function testSfCalculator5() {
-    $myClass = new AppExtension();
+    $myClass = new AppExtension(null);
 
     $input = 28.99;
     $expectedOutput = 20.01;
@@ -65,7 +65,7 @@ class AppExtensionTest extends TestCase
    * @dataProvider sfCalculatorProvider
    */
   public function testSfCalculator6($input, $expectedOutput) {
-    $myClass = new AppExtension();
+    $myClass = new AppExtension(null);
     
     $output = $myClass->sfCalculator($input);
 

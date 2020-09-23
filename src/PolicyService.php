@@ -1,16 +1,5 @@
 <?php
 
-// namespace Acme\HotelBundle\Services;
-
-// use Symfony\Component\DependencyInjection\ContainerInterface as Container;
-
-// use Acme\HotelBundle\Services\ElasticServiceAbstract;
-// use Acme\HotelBundle\Util\ElasticUtil;
-
-// use Acme\HotelBundle\Model\Policy\PenaltyModel;
-// use Acme\HotelBundle\Model\Policy\RateModel;
-// use Acme\HotelBundle\Model\Policy\PolicyResponseModel;
-
 namespace App;
 use App\Deps\ContainerInterface as Container;
 use App\Model\PenaltyModel;

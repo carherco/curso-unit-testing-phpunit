@@ -5,8 +5,7 @@ Pruebas Unitarias
 
   - [Definiciones](./intro.md)
   - [Conceptos](./conceptos.md)
-
-- [Buenas Prácticas](./buenas-practicas.md)
+  - Primer test
 
 - Testing Básico
 
@@ -21,6 +20,8 @@ Pruebas Unitarias
     - [Tipos](./dobles.md)
     - [Frameworks](./frameworks.md)
 
+- [Buenas Prácticas](./buenas-practicas.md)
+
 - Métricas de calidad
 
   - [Cobertura de código](./calidad/cobertura.md)
@@ -28,3 +29,8 @@ Pruebas Unitarias
   - [Índice CRAP](./calidad/crap.md)
   - Deuda técnica
   - [Tests de Mutaciones](./mutaciones.md)
+
+- Extras
+
+  - [Testeo de métodos protegidos](./protected_methods.md)
+  - [Testeo de métodos privados](./private_methods.md)

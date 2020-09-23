@@ -232,7 +232,3 @@ class PolicyServiceTest extends TestCase {
     $myClass->policy( $requestMock );    
   }
 }
-
-
-
-

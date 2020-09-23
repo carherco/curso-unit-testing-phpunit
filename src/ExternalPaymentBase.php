@@ -1,12 +1,5 @@
 <?php
 
-// \Sapiens\Frontend\WebServicesBundle\Services\ExternalPayment\ExternalPaymentBase
-
-// Almacena en la BBDD una petición de pago desde un TPV externo. En la tabla wstravel.secure_payments
-// Se llama desde los service de los TPV que tenemos implementados, como por ejemplo desde el método 
-// \Sapiens\Frontend\WebServicesBundle\Services\ExternalPayment\RedsysService::createPaymentSession
-
-
 class ExternalPaymentBase
 {
   /**

@@ -1,7 +1,5 @@
 <?php
 
-// \Sapiens\Travel\BookingBundle\Connectors\Transport\Iberia\IberiaConnector
-
 class IberiaConnector
 {
   /**
