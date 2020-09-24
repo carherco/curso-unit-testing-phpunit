@@ -1,27 +1,36 @@
 Pruebas Unitarias
 =================
 
-1. Introducción
+- Introducción
 
-2. JUnit
+  - [Definiciones](./docs/intro.md)
+  - [Conceptos](./docs/conceptos.md)
+  - Primer test
 
-3. Normativa de Test usada
+- Testing Básico
 
-4. Mocks
+  - Funciones puras
+  - Funciones impuras sin dependencias externas
+  - Excepciones
 
-- Tipos de Mocks
+- Testing avanzado
 
-- Frameworks de Mocks
+  - Testeo de funciones con dependencias
+  - Mocks
+    - [Tipos](./docs/dobles.md)
+    - [Frameworks](./docs/frameworks.md)
 
-5. Calidad de Test
+- [Buenas Prácticas](./buenas-practicas.md)
 
-- Cobertura
+- Métricas de calidad
 
-- Mutación Test
+  - [Cobertura de código](./docs/calidad/cobertura.md)
+  - [Complejidad ciclomática](./docs/calidad/cobertura.md)
+  - [Índice CRAP](./docs/calidad/crap.md)
+  - Deuda técnica
+  - [Tests de Mutaciones](./docs/mutaciones.md)
 
-6. Desarrollo Dirigido por Tests (TDD)
+- Extras
 
-- El Algoritmo TDD
-
-La documentación del curso está en [docs/index.md](./docs/index.md)
-
+  - [Testeo de métodos protegidos](./docs/protected_methods.md)
+  - [Testeo de métodos privados](./docs/private_methods.md)
