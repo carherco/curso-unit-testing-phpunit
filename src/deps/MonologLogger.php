@@ -13,7 +13,7 @@ use Throwable;
  *
  * @author Jordi Boggiano <j.boggiano@seld.be>
  */
-class Logger
+class MonologLogger
 {
     /**
      * Detailed debug information

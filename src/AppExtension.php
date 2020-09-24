@@ -42,7 +42,8 @@ class AppExtension
  
     public function stringDiffDate($content)
     {
-        $now = new \DateTime();
+        // $now = new \DateTime();
+        $now = $this->getDateTimeNow();
         $date = $content->diff($now);
 
         if ($date->days > 1) {
@@ -60,6 +61,11 @@ class AppExtension
                 return 'Hace ' . $date->i . ' minutos';
             } 
         }
+    }
+
+    protected function getDateTimeNow() 
+    {
+        return new \DateTime();
     }
 
     public function onlyCity($content)

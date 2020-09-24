@@ -2,6 +2,7 @@
 
 namespace App\Deps;
 
-class AppException extends Logger
+class AppException //extends MonologLogger
 {  
+  public function info($message) {}
 }

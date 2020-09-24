@@ -108,6 +108,135 @@ class AppExtensionTest extends TestCase
   //   $this->assertEquals($expectedOutput, $output);
   // }
 
+  public function testPaxtype2textShouldReturnAdultoWhenContentIsADT() {
+    $myClass = new AppExtension(null);
+
+    $this->assertEquals('adulto', $myClass->paxtype2text('ADT'));
+  }
+
+  public function testPaxtype2textShouldReturnNinoWhenContentIsCHD() {
+    $myClass = new AppExtension(null);
+
+    $this->assertEquals('niño', $myClass->paxtype2text('CHD'));
+  }
+
+  public function testPaxtype2textShouldReturnBebeWhenContentIsINF() {
+    $myClass = new AppExtension(null);
+
+    $this->assertEquals('bebé', $myClass->paxtype2text('INF'));
+  }
+
+  /**
+   * @dataProvider paxtype2textProvider
+   */
+  public function testPaxtype2text() {
+    $myClass = new AppExtension(null);
+
+    $this->assertEquals('bebé', $myClass->paxtype2text('INF'));
+  }
+
+  public function paxtype2textProvider()
+  {
+      return [
+        'should return adulto when content is ADT' => ['ADT', 'adulto'],
+        'should return niño when content is CHD' => ['CHD', 'niño'],
+        'should return bebé when content is INF' => ['INF', 'bebé'],
+        'should return the original content when content is not one of above' => ['XYZ', 'XYZ'],
+    ];
+  }
+
+  public function testStringDiffDateOneMinuteOfDifference() 
+  {
+    // Setup
+    $myClass = $this->getMockBuilder(AppExtension::class)
+      ->disableOriginalConstructor()
+      ->setMethods(['getDateTimeNow'])
+      ->getMock();
+
+    $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
+    $myClass
+      ->expects($this->at(0)) // la primera vez que 
+      ->method('getDateTimeNow') // llame al método getDate
+      ->willReturn($date); // devuelve $date
+
+    // Act
+    $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:01:08');
+    $output = $myClass->stringDiffDate($input);
+
+
+    // Assert
+    $this->assertEquals('Hace 1 minuto', $output);
+
+  }
+
+  public function testStringDiffDateSomeMinutesOfDifference() 
+  {
+    // Setup
+    $myClass = $this->getMockBuilder(AppExtension::class)
+      ->disableOriginalConstructor()
+      ->setMethods(['getDateTimeNow'])
+      ->getMock();
+
+    $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
+    $myClass
+      ->expects($this->at(0)) // la primera vez que 
+      ->method('getDateTimeNow') // llame al método getDate
+      ->willReturn($date); // devuelve $date
+
+    // Act
+    $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 08:59:08');
+    $output = $myClass->stringDiffDate($input);
+
+
+    // Assert
+    $this->assertEquals('Hace 3 minutos', $output);
+  }
+
+  public function testStringDiffDateOneHourOfDifference() 
+  {
+    // Setup
+    $myClass = $this->getMockBuilder(AppExtension::class)
+      ->disableOriginalConstructor()
+      ->setMethods(['getDateTimeNow'])
+      ->getMock();
+
+    $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
+    $myClass
+      ->expects($this->at(0)) // la primera vez que 
+      ->method('getDateTimeNow') // llame al método getDate
+      ->willReturn($date); // devuelve $date
+
+    // Act
+    $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 08:01:08');
+    $output = $myClass->stringDiffDate($input);
+
+
+    // Assert
+    $this->assertEquals('Hace 1 hora', $output);
+  }
+
+  public function testStringDiffDateSomeHoursOfDifference() 
+  {
+    // Setup
+    $myClass = $this->getMockBuilder(AppExtension::class)
+      ->disableOriginalConstructor()
+      ->setMethods(['getDateTimeNow'])
+      ->getMock();
+
+    $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
+    $myClass
+      ->expects($this->at(0)) // la primera vez que 
+      ->method('getDateTimeNow') // llame al método getDate
+      ->willReturn($date); // devuelve $date
+
+    // Act
+    $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 04:01:08');
+    $output = $myClass->stringDiffDate($input);
+
+
+    // Assert
+    $this->assertEquals('Hace 5 horas', $output);
+  }
   
 }
   
