@@ -1,6 +1,6 @@
 <?php
 
-class IberiaConnector
+class IbericaConnector
 {
   /**
    * @param BookingLine $bl
@@ -12,7 +12,7 @@ class IberiaConnector
   {
 
     if (isset($parametersOfConnector['version']) && $parametersOfConnector['version'] === '17.2') {
-      $connector172 = new IberiaConnector_17_2($this->token, 'Iberia172');
+      $connector172 = new IbericaConnector_17_2($this->token, 'Iberica172');
       return $connector172->flightChange($bl, $parametersOfConnector, $params);
     }
 
@@ -21,7 +21,7 @@ class IberiaConnector
       if (null === $kernel->getContainer()) {
         return;
       }
-      $target = IberiaHelper::getTarget($parametersOfConnector);
+      $target = IbericaHelper::getTarget($parametersOfConnector);
 
       $parametersOfConnector['category'] = 'FlightChange';
 
@@ -47,26 +47,26 @@ class IberiaConnector
             return;
           }
           # hacemos la cancelación directamente, si hubiese que separarlo sería desde aquí.
-          $orderChangeRQ = IberiaGenerator::generateOrderChangeRQ($bl, $parametersOfConnector, $target, 'delete', $params);
+          $orderChangeRQ = IbericaGenerator::generateOrderChangeRQ($bl, $parametersOfConnector, $target, 'delete', $params);
           $orderChangeRS = $kernel->getContainer()
-            ->get('acme.iberia.services.methods.order_change')
+            ->get('acme.iberica.services.methods.order_change')
             ->send($parametersOfConnector, $orderChangeRQ);
           /*$orderChangeRS = file_get_contents('/home/ubuntu/txp/ib/dev/OrderChange_201811075453_rs.xml');
                   $orderChangeRS = new SimpleXML($orderChangeRS);*/
           // Eliminar pasajeros.
-          $reader = new IberiaOrderViewReader();
+          $reader = new IbericaOrderViewReader();
           $reader->readResponse($orderChangeRS, $bl, $parametersOfConnector, 'refund');
         } else {
           $action = ($complete) ? 'Cancel' : 'delete';
           # recuperamos el coste de reembolso para la combinación recibida.
-          $itinReshopRQ = IberiaGenerator::generateItinReshopRQ($bl, $parametersOfConnector, $action, $target, $params);
+          $itinReshopRQ = IbericaGenerator::generateItinReshopRQ($bl, $parametersOfConnector, $action, $target, $params);
           $itinReshopRS = $kernel->getContainer()
-            ->get('acme.iberia.services.methods.itin_reshop')
+            ->get('acme.iberica.services.methods.itin_reshop')
             ->send($parametersOfConnector, $itinReshopRQ);
           /*$itinReshopRS = file_get_contents('/home/ubuntu/txp/ib/dev/ItinReshop_201811050518_rs.xml');
                   $itinReshopRS = new SimpleXML($itinReshopRS);*/
           // Get new OrderItemId and Amount
-          $reader = new IberiaItinReshopReader();
+          $reader = new IbericaItinReshopReader();
           $reader->readRepriceResponse($itinReshopRS, $bl, $parametersOfConnector, $itinReshopRQ);
         }
       } ## Flight Change Selected. (Reprice and change)
