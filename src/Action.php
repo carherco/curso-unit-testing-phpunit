@@ -1,8 +1,17 @@
 <?php 
 
+namespace App;
+
+use App\Deps\ContainerInterface as Container;
+
 class Action {
-  
-  protected function addSaldo( $agency, $amount )
+  protected $container;    
+
+  public function __construct(Container $container) {
+      $this->container = $container;
+  }  
+
+  public function addSaldo( $agency, $amount )
   {
     try {
 

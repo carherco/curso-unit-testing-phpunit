@@ -14,12 +14,12 @@ class AvailPreferenceServiceChild extends AvailPreferenceService {
 }
 
 class AvailPreferenceServiceTest extends TestCase {
-    public function testIsValidReturnsFalseWhenRuleTariffNotProvided() {
+    public function testIsValidShouldReturnFalseWhenRuleTariffNotProvided() {
       
       $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
-      $transportDummy = $this->createStub(App\Model\Transport::class);
-      $transportDummy->method('checkTariff')->will($this->returnValue(true));
-      $transportDummy->method('checkClass')->will($this->returnValue(true));
+      $transportStub = $this->createStub(App\Model\Transport::class);
+      $transportStub->method('checkTariff')->will($this->returnValue(true));
+      $transportStub->method('checkClass')->will($this->returnValue(true));
 
       $rule = [
         'tariff' => '',
@@ -27,15 +27,15 @@ class AvailPreferenceServiceTest extends TestCase {
       ];
 
       $sut = new AvailPreferenceServiceChild($containerDummy);
-      $isValid = $sut->isValid($transportDummy, $rule);
+      $isValid = $sut->isValid($transportStub, $rule);
       $this->assertFalse($isValid);
     }
 
-    public function testIsValidReturnsFalseWhenRuleClassNotProvided() {
+    public function testIsValidShouldReturnFalseWhenRuleClassNotProvided() {
       $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
-      $transportDummy = $this->createStub(App\Model\Transport::class);
-      $transportDummy->method('checkTariff')->will($this->returnValue(true));
-      $transportDummy->method('checkClass')->will($this->returnValue(true));
+      $transportStub = $this->createStub(App\Model\Transport::class);
+      $transportStub->method('checkTariff')->will($this->returnValue(true));
+      $transportStub->method('checkClass')->will($this->returnValue(true));
 
       $rule = [
         'tariff' => 'not empty',
@@ -43,15 +43,16 @@ class AvailPreferenceServiceTest extends TestCase {
       ];
 
       $sut = new AvailPreferenceServiceChild($containerDummy);
-      $isValid = $sut->isValid($transportDummy, $rule);
+      $isValid = $sut->isValid($transportStub, $rule);
+      
       $this->assertFalse($isValid);
     }
 
-    public function testIsValidReturnsFalseWhenTransportCheckTariffReturnsFalse() {
+    public function testIsValidShouldReturnFalseWhenTransportCheckTariffReturnsFalse() {
       $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
-      $transportDummy = $this->createStub(App\Model\Transport::class);
-      $transportDummy->method('checkTariff')->will($this->returnValue(false));
-      $transportDummy->method('checkClass')->will($this->returnValue(true));
+      $transportStub = $this->createStub(App\Model\Transport::class);
+      $transportStub->method('checkTariff')->will($this->returnValue(false));
+      $transportStub->method('checkClass')->will($this->returnValue(true));
 
       $rule = [
         'tariff' => 'not empty',
@@ -59,8 +60,43 @@ class AvailPreferenceServiceTest extends TestCase {
       ];
 
       $sut = new AvailPreferenceServiceChild($containerDummy);
-      $isValid = $sut->isValid($transportDummy, $rule);
+      $isValid = $sut->isValid($transportStub, $rule);
+      
       $this->assertFalse($isValid);
+    }
+
+    public function testIsValidShouldReturnFalseWhenTransportCheckClassReturnsFalse() {
+      $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
+      $transportStub = $this->createStub(App\Model\Transport::class);
+      $transportStub->method('checkTariff')->will($this->returnValue(true));
+      $transportStub->method('checkClass')->will($this->returnValue(false));
+
+      $rule = [
+        'tariff' => 'not empty',
+        'class' => 'not empty'
+      ];
+
+      $sut = new AvailPreferenceServiceChild($containerDummy);
+      $isValid = $sut->isValid($transportStub, $rule);
+      
+      $this->assertFalse($isValid);
+    }
+
+    public function testIsValidShouldReturnTrueWhenThereArentAnyPrefferredAirlains() {
+      $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
+      $transportStub = $this->createStub(App\Model\Transport::class);
+      $transportStub->method('checkTariff')->will($this->returnValue(true));
+      $transportStub->method('checkClass')->will($this->returnValue(true));
+
+      $rule = [
+        'tariff' => 'not empty',
+        'class' => 'not empty'
+      ];
+
+      $sut = new AvailPreferenceServiceChild($containerDummy);
+      $isValid = $sut->isValid($transportStub, $rule);
+      
+      $this->assertTrue($isValid);
     }
 }
   

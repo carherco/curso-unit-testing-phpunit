@@ -1,7 +1,7 @@
-JUnit
-=====
+# PhpUnit
 
-Para escribir tests en Junit necesitamos al menos lo siguiente:
+
+Para escribir tests en PHPUnit necesitamos al menos lo siguiente:
 
 - Importar las Assertions necesarias (org.junit.jupiter.api.Assertions.*)
 - Importar el decorador @Test (org.junit.jupiter.api.Test)
@@ -104,36 +104,14 @@ Anotaciones
 
 - [Anotaciones](./anotaciones.md)
 
-Diferencias con JUnit v4
-------------------------
+## Leyenda
 
-- El mensaje de test fallido es el primer parámetro en JUnit 4
-
-```java
-assertEquals(expected, actual);
-assertEquals("failure - strings are not equal", expected, actual);
 ```
-
-- Aserciones de excepciones
-
-El testeo de excepciones en JUnit 4 se realizaba a través de la anotación @Test
-
-```java
-@Test(expected = NullPointerException.class)
-public void exceptionTesting() {
-    String test = null;
-    test.length();
-}
-```
-
-En JUnit 5 existen assertions para ello:
-
-```java
-@Test
-void exceptionTesting() {
-    assertThrows(NullPointerException.class, () -> {
-    		String test = null;
-    		test.length();
-    });
-}
+.   Printed when the test succeeds.
+F   Printed when an assertion fails while running the test method.
+E   Printed when an error occurs while running the test method.
+R   Printed when the test has been marked as risky (see Chapter 6).
+S   Printed when the test has been skipped (see Chapter 7).
+I   Printed when the test is marked as being incomplete or not yet implemented (see Chapter 7).
+W   Printed when the test has warnings
 ```

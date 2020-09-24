@@ -11,7 +11,6 @@
 
 namespace App\Deps;
 
-use Symfony\Component\HttpFoundation\Exception\ConflictingHeadersException;
 use Symfony\Component\HttpFoundation\Exception\SuspiciousOperationException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 

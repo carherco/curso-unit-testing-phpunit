@@ -114,7 +114,7 @@ class PolicyServiceTest extends TestCase {
     $myClass->policy( $requestMock );    
   }
 
-  public function testCheckinParamMustBeWellFormatted() {
+  public function testShouldThrowExceptionWhenCheckinParamIsNotWellFormatted() {
 
     // Setup
     $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);

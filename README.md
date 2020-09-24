@@ -34,3 +34,4 @@ Pruebas Unitarias
 
   - [Testeo de métodos protegidos](./docs/protected_methods.md)
   - [Testeo de métodos privados](./docs/private_methods.md)
+  - [Ejecutar un único test](https://stackoverflow.com/questions/26095051/how-to-run-single-test-method-with-phpunit)
