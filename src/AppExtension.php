@@ -102,9 +102,9 @@ class AppExtension
         return strftime($this->_winCrack($format), strtotime("+". $content . "months"));
     }
 
-    public function paxtype2text($content)
+    public function paxtype2text($passengerType)
     {
-        switch ($content) {
+        switch ($passengerType) {
             case 'ADT':
                 return 'adulto';
                 break;
@@ -115,7 +115,7 @@ class AppExtension
                 return 'bebé';
                 break;            
             default:
-                return $content;
+                return $passengerType;
                 break;
         }
     }
