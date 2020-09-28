@@ -1,0 +1,571 @@
+Escaped mutants:
+================
+
+1) /Users/carlos/mamp/PruebasUnitarias/src/Calculation.php:11    [M] OneZeroInteger
+
+--- Original
++++ New
+@@ @@
+     public function findMax($arr)
+     {
+         $max = $arr[0];
+-        for ($i = 0; $i < count($arr); $i++) {
++        for ($i = 1; $i < count($arr); $i++) {
+             if ($max < $arr[$i]) {
+                 $max = $arr[$i];
+             }
+
+
+2) /Users/carlos/mamp/PruebasUnitarias/src/Calculation.php:12    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+     {
+         $max = $arr[0];
+         for ($i = 0; $i < count($arr); $i++) {
+-            if ($max < $arr[$i]) {
++            if ($max <= $arr[$i]) {
+                 $max = $arr[$i];
+             }
+         }
+
+
+3) /Users/carlos/mamp/PruebasUnitarias/src/Cuenta.php:29    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+         if (round($cantidad, 2) != $cantidad) {
+             return false;
+         }
+-        if ($cantidad < 0) {
++        if ($cantidad <= 0) {
+             return false;
+         }
+         if ($cantidad > 6000.0) {
+
+
+4) /Users/carlos/mamp/PruebasUnitarias/src/Cuenta.php:52    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+         if (round($cantidad, 2) != $cantidad) {
+             return false;
+         }
+-        if ($cantidad < 0) {
++        if ($cantidad <= 0) {
+             return false;
+         }
+         if ($cantidad > $this->saldo) {
+
+
+5) /Users/carlos/mamp/PruebasUnitarias/src/Cuenta.php:56    [M] GreaterThan
+
+--- Original
++++ New
+@@ @@
+         if ($cantidad < 0) {
+             return false;
+         }
+-        if ($cantidad > $this->saldo) {
++        if ($cantidad >= $this->saldo) {
+             return false;
+         }
+         if ($cantidad > 6000.0) {
+
+
+6) /Users/carlos/mamp/PruebasUnitarias/src/Cuenta.php:77    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+     }
+     private function validarCantidadTransferencia($cantidad)
+     {
+-        if ($cantidad < 0) {
++        if ($cantidad <= 0) {
+             return false;
+         }
+         if ($cantidad > $this->saldo) {
+
+
+7) /Users/carlos/mamp/PruebasUnitarias/src/Cuenta.php:78    [M] FalseValue
+
+--- Original
++++ New
+@@ @@
+     private function validarCantidadTransferencia($cantidad)
+     {
+         if ($cantidad < 0) {
+-            return false;
++            return true;
+         }
+         if ($cantidad > $this->saldo) {
+             return false;
+
+
+8) /Users/carlos/mamp/PruebasUnitarias/src/Cuenta.php:81    [M] GreaterThan
+
+--- Original
++++ New
+@@ @@
+         if ($cantidad < 0) {
+             return false;
+         }
+-        if ($cantidad > $this->saldo) {
++        if ($cantidad >= $this->saldo) {
+             return false;
+         }
+         if ($cantidad > 3000) {
+
+
+9) /Users/carlos/mamp/PruebasUnitarias/src/Customer.php:12    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+     private $age;
+     public function setAge($age)
+     {
+-        if ($age < 0) {
++        if ($age <= 0) {
+             throw new LogicException("No puede ser un número negativo");
+         }
+         $this->age = $age;
+
+
+Timed Out mutants:
+==================
+
+Skipped mutants:
+================
+
+Not Covered mutants:
+====================
+
+1) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:11    [M] PublicVisibility
+
+--- Original
++++ New
+@@ @@
+ class SmartHomeController
+ {
+     private DateTime $lastMotionTime;
+-    public function actuateLights($motionDetected)
++    protected function actuateLights($motionDetected)
+     {
+         $time = new DateTime();
+         // Update the time of last motion.
+
+
+2) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:25    [M] AssignmentEqual
+
+--- Original
++++ New
+@@ @@
+         $timeUtils = new TimeUtils();
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+-        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
++        if ($motionDetected && (($timeOfDay = "Evening") || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+
+
+3) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:25    [M] AssignmentEqual
+
+--- Original
++++ New
+@@ @@
+         $timeUtils = new TimeUtils();
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+-        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
++        if ($motionDetected && ($timeOfDay == "Evening" || ($timeOfDay = "Night"))) {
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+
+
+4) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:25    [M] Equal
+
+--- Original
++++ New
+@@ @@
+         $timeUtils = new TimeUtils();
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+-        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
++        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay != "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+
+
+5) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:25    [M] LogicalOr
+
+--- Original
++++ New
+@@ @@
+         $timeUtils = new TimeUtils();
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+-        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
++        if ($motionDetected && ($timeOfDay == "Evening" && $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+
+
+6) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:25    [M] LogicalAnd
+
+--- Original
++++ New
+@@ @@
+         $timeUtils = new TimeUtils();
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+-        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
++        if ($motionDetected || ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+
+
+7) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:25    [M] Equal
+
+--- Original
++++ New
+@@ @@
+         $timeUtils = new TimeUtils();
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+-        if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
++        if ($motionDetected && ($timeOfDay != "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+
+
+8) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:26    [M] MethodCallRemoval
+
+--- Original
++++ New
+@@ @@
+         $timeOfDay = $timeUtils->getTimeOfDay();
+         $backyardSwitcher = new BackyardSwitcher();
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+-            $backyardSwitcher->turnOn();
++            
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+
+
+9) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] Equal
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay != "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+10) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] LogicalOr
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime > $time->modify("+1 minutes") && ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+11) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] LogicalOr
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime > $time->modify("+1 minutes") || $timeOfDay == "Morning" && $timeOfDay == "Afternoon") {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+12) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] AssignmentEqual
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || ($timeOfDay = "Afternoon"))) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+13) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] Equal
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay != "Morning" || $timeOfDay == "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+14) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] AssignmentEqual
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime > $time->modify("+1 minutes") || (($timeOfDay = "Morning") || $timeOfDay == "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+15) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] GreaterThanNegotiation
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime <= $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+16) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:29    [M] GreaterThan
+
+--- Original
++++ New
+@@ @@
+         if ($motionDetected && ($timeOfDay == "Evening" || $timeOfDay == "Night")) {
+             $backyardSwitcher->turnOn();
+         } else {
+-            if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
++            if ($this->lastMotionTime >= $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+                 $backyardSwitcher->turnOff();
+             }
+         }
+     }
+ }
+
+
+17) /Users/carlos/mamp/PruebasUnitarias/src/SmartHomeController.php:30    [M] MethodCallRemoval
+
+--- Original
++++ New
+@@ @@
+             $backyardSwitcher->turnOn();
+         } else {
+             if ($this->lastMotionTime > $time->modify("+1 minutes") || ($timeOfDay == "Morning" || $timeOfDay == "Afternoon")) {
+-                $backyardSwitcher->turnOff();
++                
+             }
+         }
+     }
+ }
+
+
+18) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:9    [M] PublicVisibility
+
+--- Original
++++ New
+@@ @@
+ //use DateTimeInterface;
+ class TimeUtils
+ {
+-    public function getTimeOfDay()
++    protected function getTimeOfDay()
+     {
+         $time = new DateTime();
+         $hour = $time->format('H');
+
+
+19) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:13    [M] GreaterThanOrEqualTo
+
+--- Original
++++ New
+@@ @@
+     {
+         $time = new DateTime();
+         $hour = $time->format('H');
+-        if ($hour >= 0 && $hour < 6) {
++        if ($hour > 0 && $hour < 6) {
+             return "Night";
+         }
+         if ($hour < 12) {
+
+
+20) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:13    [M] GreaterThanOrEqualToNegotiation
+
+--- Original
++++ New
+@@ @@
+     {
+         $time = new DateTime();
+         $hour = $time->format('H');
+-        if ($hour >= 0 && $hour < 6) {
++        if ($hour < 0 && $hour < 6) {
+             return "Night";
+         }
+         if ($hour < 12) {
+
+
+21) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:13    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+     {
+         $time = new DateTime();
+         $hour = $time->format('H');
+-        if ($hour >= 0 && $hour < 6) {
++        if ($hour >= 0 && $hour <= 6) {
+             return "Night";
+         }
+         if ($hour < 12) {
+
+
+22) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:13    [M] LessThanNegotiation
+
+--- Original
++++ New
+@@ @@
+     {
+         $time = new DateTime();
+         $hour = $time->format('H');
+-        if ($hour >= 0 && $hour < 6) {
++        if ($hour >= 0 && $hour >= 6) {
+             return "Night";
+         }
+         if ($hour < 12) {
+
+
+23) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:13    [M] LogicalAnd
+
+--- Original
++++ New
+@@ @@
+     {
+         $time = new DateTime();
+         $hour = $time->format('H');
+-        if ($hour >= 0 && $hour < 6) {
++        if ($hour >= 0 || $hour < 6) {
+             return "Night";
+         }
+         if ($hour < 12) {
+
+
+24) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:17    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+         if ($hour >= 0 && $hour < 6) {
+             return "Night";
+         }
+-        if ($hour < 12) {
++        if ($hour <= 12) {
+             return "Morning";
+         }
+         if ($hour < 18) {
+
+
+25) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:17    [M] LessThanNegotiation
+
+--- Original
++++ New
+@@ @@
+         if ($hour >= 0 && $hour < 6) {
+             return "Night";
+         }
+-        if ($hour < 12) {
++        if ($hour >= 12) {
+             return "Morning";
+         }
+         if ($hour < 18) {
+
+
+26) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:21    [M] LessThan
+
+--- Original
++++ New
+@@ @@
+         if ($hour < 12) {
+             return "Morning";
+         }
+-        if ($hour < 18) {
++        if ($hour <= 18) {
+             return "Afternoon";
+         }
+         return "Evening";
+     }
+ }
+
+
+27) /Users/carlos/mamp/PruebasUnitarias/src/TimeUtils.php:21    [M] LessThanNegotiation
+
+--- Original
++++ New
+@@ @@
+         if ($hour < 12) {
+             return "Morning";
+         }
+-        if ($hour < 18) {
++        if ($hour >= 18) {
+             return "Afternoon";
+         }
+         return "Evening";
+     }
+ }

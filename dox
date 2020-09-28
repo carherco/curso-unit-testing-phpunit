@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2em;
+            }
+
+            body > ul > li {
+                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-family: Tahoma, Helvetica, Arial;
+                font-size: 3em;
+            }
+
+            ul {
+                list-style: none;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="ActionTest">Action</h2>
+        <ul>
+            <li style="color: #555753;">✓ Add saldo should call agency manager with correct params and return output</li>
+            <li style="color: #555753;">✓ Add saldo should call monolog when agency manager throws exception</li>
+        </ul>
+        <h2 id="AppExtensionTest">App Extension</h2>
+        <ul>
+            <li style="color: #555753;">✓ Sf calculator</li>
+            <li style="color: #555753;">✓ Sf calculator</li>
+            <li style="color: #555753;">✓ Sf calculator</li>
+            <li style="color: #555753;">✓ Sf calculator</li>
+            <li style="color: #555753;">✓ Sf calculator</li>
+            <li style="color: #555753;">✓ Sf calculator with data set "sin decimales"</li>
+            <li style="color: #555753;">✓ Sf calculator with data set "con 0"</li>
+            <li style="color: #555753;">✓ Sf calculator with data set "con decimales"</li>
+            <li style="color: #555753;">✓ Sf calculator with data set "con decimales .01"</li>
+            <li style="color: #555753;">✓ Sf calculator with data set "con decimales .99"</li>
+            <li style="color: #555753;">✓ Paxtype 2text should return adulto when content is a d t</li>
+            <li style="color: #555753;">✓ Paxtype 2text should return nino when content is c h d</li>
+            <li style="color: #555753;">✓ Paxtype 2text should return bebe when content is i n f</li>
+            <li style="color: #555753;">✓ Paxtype 2text with data set "should return adulto when content is ADT"</li>
+            <li style="color: #555753;">✓ Paxtype 2text with data set "should return niño when content is CHD"</li>
+            <li style="color: #555753;">✓ Paxtype 2text with data set "should return bebé when content is INF"</li>
+            <li style="color: #555753;">✓ Paxtype 2text with data set "should return the original content when content is not one of above"</li>
+            <li style="color: #ef2929;">❌ String diff date one minute of difference</li>
+            <li style="color: #555753;">✓ String diff date some minutes of difference</li>
+            <li style="color: #555753;">✓ String diff date one hour of difference</li>
+            <li style="color: #555753;">✓ String diff date some hours of difference</li>
+        </ul>
+        <h2 id="AvailPreferenceServiceTest">Avail Preference Service</h2>
+        <ul>
+            <li style="color: #ef2929;">❌ Is valid should return false when rule tariff not provided</li>
+            <li style="color: #ef2929;">❌ Is valid should return false when rule class not provided</li>
+            <li style="color: #555753;">✓ Is valid should return false when transport check tariff returns false</li>
+            <li style="color: #555753;">✓ Is valid should return false when transport check class returns false</li>
+            <li style="color: #555753;">✓ Is valid should return true when there arent any prefferred airlains</li>
+        </ul>
+        <h2 id="PolicyServiceTest">Policy Service</h2>
+        <ul>
+            <li style="color: #555753;">✓ Rate param is mandatory</li>
+            <li style="color: #555753;">✓ Cn param is mandatory</li>
+            <li style="color: #555753;">✓ Checkin param is mandatory and throws exception if not provided</li>
+            <li style="color: #ef2929;">❌ Should throw exception when checkin param is not well formatted</li>
+            <li style="color: #555753;">✓ When rate manager throws exception should bypass exception</li>
+            <li style="color: #555753;">✓ X x x x x x</li>
+        </ul>
+        <h2 id="CalculationTest">Calculation</h2>
+        <ul>
+            <li style="color: #555753;">✓ Find max</li>
+            <li style="color: #555753;">✓ Find max when max is first element</li>
+            <li style="color: #555753;">✓ Find max when max is last element</li>
+            <li style="color: #555753;">✓ Find max when max is repeated</li>
+            <li style="color: #555753;">✓ Find max with negative numbers</li>
+            <li style="color: #555753;">✓ Find max with 1 element</li>
+        </ul>
+        <h2 id="CuentaTest">Cuenta</h2>
+        <ul>
+            <li style="color: #555753;">✓ Al crear cuenta el saldo es cero</li>
+            <li style="color: #555753;">✓ No se puede retirar mas saldo del disponible</li>
+            <li style="color: #555753;">✓ Transferencia limite cantidad 3000</li>
+            <li style="color: #555753;">✓ Transferencia negativa no es valida</li>
+            <li style="color: #555753;">✓ Transferencia</li>
+            <li style="color: #555753;">✓ Retirada mas de 6000 no es valido</li>
+            <li style="color: #555753;">✓ Retirada maximo es de 6000</li>
+            <li style="color: #555753;">✓ Retirada cantidad mas de 2 decimales no es valida</li>
+            <li style="color: #555753;">✓ Retirada cantidad de 2 decimales es valida</li>
+            <li style="color: #555753;">✓ No se puede retirar cantidad negativa</li>
+            <li style="color: #555753;">✓ Retirada cantidad 2 decimales</li>
+            <li style="color: #555753;">✓ Al retirar 200 en cuenta con 1200 el saldo es 1000 y al retirar otros 150 el saldo es 850</li>
+            <li style="color: #555753;">✓ Al ingresar 100 en cuenta vacia el saldo es 100</li>
+            <li style="color: #555753;">✓ Al retirar 200 en cuenta con 900 el saldo es 700</li>
+            <li style="color: #555753;">✓ Al retirar 100 en cuenta con 500 el saldo es 400</li>
+            <li style="color: #555753;">✓ Ingreso mas de 6000 no es valido</li>
+            <li style="color: #555753;">✓ Ingreso maximo es de 6000</li>
+            <li style="color: #555753;">✓ Ingreso cantidad mas de 2 decimales no es valido</li>
+            <li style="color: #555753;">✓ Ingreso cantidad 2 decimales</li>
+            <li style="color: #555753;">✓ No se puede ingresar cantidad negativa</li>
+            <li style="color: #555753;">✓ Al ingresar 3000 en cuenta con 100 el saldo es 3100</li>
+            <li style="color: #555753;">✓ Al ingresar 3000 en cuenta vacia el saldo es 3000</li>
+            <li style="color: #555753;">✓ No se puede transferir mas saldo del disponible</li>
+        </ul>
+        <h2 id="CustomerTest">Customer</h2>
+        <ul>
+            <li style="color: #555753;">✓ Set positive age</li>
+            <li style="color: #555753;">✓ Set age with negative age throws exception</li>
+        </ul>
+        <h2 id="DNITest">DNI</h2>
+        <ul>
+            <li style="color: #555753;">✓ Calcular d n i</li>
+            <li style="color: #555753;">✓ Calcular d n i</li>
+            <li style="color: #555753;">✓ Calcular d n i</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #0</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #17</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #31</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #30</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #29</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #28</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #27</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #26</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #25</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #24</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #23</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #22</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #21</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #20</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #19</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #18</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #16</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #1</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #15</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #14</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #13</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #12</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #11</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #10</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #9</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #8</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #7</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #6</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #5</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #4</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #3</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #2</li>
+            <li style="color: #555753;">✓ Calcular d n i with provider with data set #32</li>
+        </ul>
+        <h2 id="CardTest">Card</h2>
+        <ul>
+            <li style="color: #555753;">✓ Get expire date with default format</li>
+            <li style="color: #555753;">✓ Get expire date with default format and 1 digit month</li>
+            <li style="color: #555753;">✓ Get expire date with format with data set #0</li>
+            <li style="color: #555753;">✓ Get expire date with format with data set #1</li>
+            <li style="color: #555753;">✓ Get expire date with format with data set #2</li>
+            <li style="color: #ef2929;">❌ Get expire date with format with data set #3</li>
+            <li style="color: #ef2929;">❌ Get expire date with format with data set #4</li>
+            <li style="color: #ef2929;">❌ Get expire date with format with data set #5</li>
+            <li style="color: #555753;">✓ Get expire date with format with data set #6</li>
+        </ul>
+    </body>
+</html>
