@@ -33,6 +33,7 @@ Pruebas Unitarias
 
 - Extras
 
+  - [Data Providers: @dataProvider](./php_unit_data_providers.md)
   - [Testeo de métodos protegidos](./protected_methods.md)
   - [Testeo de métodos privados](./private_methods.md)
   - [Ejecutar un único test](https://stackoverflow.com/questions/26095051/how-to-run-single-test-method-with-phpunit)
