@@ -38,6 +38,8 @@ public function calcularLetraProvider()
 
 En la primera ejecución, se coge el primer SET: [15454423, 'X']. Cada elemento del array de este set se convierte en un argumento de entrada del test. Dichos argumentos se asignan por posición. Así, 15454423 se convertirá en el argumento $dni, y 'X' se convertirá en el argumento $expectedOtuput. Si hubiera más elementos en el array se van asignando por posición.
 
+En la segunda ejecución se coge el segundo set: [15454424, 'B'], en la tercera ejecución el tercer set, y así hasta terminar con todos los sets.
+
 Con esta anotación conseguimos:
 
 - Añadir casos de prueba de forma muy fácil.
