@@ -148,16 +148,15 @@ class AppExtensionTest extends TestCase
   public function testStringDiffDateOneMinuteOfDifference() 
   {
     // Setup
-    $myClass = $this->getMockBuilder(AppExtension::class)
+    $myClass = $this->getMockBuilder(AppExtension::class) // Este método hace una copia exacta del original
       ->disableOriginalConstructor()
-      ->setMethods(['getDateTimeNow'])
+      ->setMethods(['getDateTimeNow']) // Con setMethods alteramos el comportamiento de los métodos que elijamos. El resto de métodos funcionan de la forma original
       ->getMock();
 
     $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
     $myClass
-      ->expects($this->at(0)) // la primera vez que 
-      ->method('getDateTimeNow') // llame al método getDate
-      ->willReturn($date); // devuelve $date
+      ->method('getDateTimeNow')
+      ->willReturn($date);
 
     // Act
     $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:01:08');
@@ -179,9 +178,8 @@ class AppExtensionTest extends TestCase
 
     $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
     $myClass
-      ->expects($this->at(0)) // la primera vez que 
-      ->method('getDateTimeNow') // llame al método getDate
-      ->willReturn($date); // devuelve $date
+      ->method('getDateTimeNow')
+      ->willReturn($date);
 
     // Act
     $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 08:59:08');
@@ -202,9 +200,8 @@ class AppExtensionTest extends TestCase
 
     $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
     $myClass
-      ->expects($this->at(0)) // la primera vez que 
-      ->method('getDateTimeNow') // llame al método getDate
-      ->willReturn($date); // devuelve $date
+      ->method('getDateTimeNow')
+      ->willReturn($date);
 
     // Act
     $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 08:01:08');
@@ -225,9 +222,8 @@ class AppExtensionTest extends TestCase
 
     $date = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 09:02:10');
     $myClass
-      ->expects($this->at(0)) // la primera vez que 
-      ->method('getDateTimeNow') // llame al método getDate
-      ->willReturn($date); // devuelve $date
+      ->method('getDateTimeNow')
+      ->willReturn($date);
 
     // Act
     $input = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 04:01:08');
