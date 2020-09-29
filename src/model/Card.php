@@ -9,7 +9,6 @@ class Card {
   protected $expireMonth = '';
   protected $fullYear = '';
 
-  
   public function getExpireDate($format='mm/yyyy') {
     $value = str_pad($this->expireMonth, 2, '0', STR_PAD_LEFT) . '/' . $this->getFullYear();
     $format = strtolower($format);

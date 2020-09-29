@@ -6,10 +6,11 @@ use DateTime;
 
 class TimeUtils {
 	
-	public function getTimeOfDay()
+	public function getTimeOfDay($time)
 	{
-			$time = new DateTime();
+			// $time = new DateTime();
 			$hour = $time->format('H');
+
 	    if ($hour >= 0 && $hour < 6)
 	    {
 	        return "Night";
