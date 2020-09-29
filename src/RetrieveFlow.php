@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 // \Sapiens\Travel\BookingBundle\WorkFlow\RetrieveFlow
 
 // Se define una variable $connector y se usa para llamar al método retrieve del conector corresponndiente

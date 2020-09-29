@@ -68,6 +68,6 @@ class Card {
    */ 
   public function getYear()
   {
-    return $this->fullYear;
+    return substr( $this->fullYear, -2);
   }
 }
