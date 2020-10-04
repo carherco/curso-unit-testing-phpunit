@@ -101,7 +101,7 @@ class AppExtensionTest extends TestCase
       return [
         'should return adulto when content is ADT' => ['ADT', 'adulto'],
         'should return niño when content is CHD' => ['CHD', 'niño'],
-        'should return bebé when content is INF' => ['INF', 'bebé'],
+        'should return bebé when passeger Type is INF' => ['INF', 'bebé'],
         'should return the original content when content is not one of above' => ['XYZ', 'XYZ'],
     ];
   }

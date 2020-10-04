@@ -6,7 +6,7 @@ use App\PolicyService;
 
 class PolicyServiceTest extends TestCase {
   
-  public function testRateParamIsMandatory() {
+  public function testRateParamIsMandatoryAndThrowsExceptionIfNotProvided() {
 
     // Setup
     $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
@@ -42,7 +42,7 @@ class PolicyServiceTest extends TestCase {
     $myClass->policy( $requestMock );    
   }
 
-  public function testCnParamIsMandatory() {
+  public function testCnParamIsMandatoryAndThrowsExceptionIfNotProvided() {
 
     // Setup
     $containerDummy = $this->createStub(App\Deps\ContainerInterface::class);
@@ -151,85 +151,85 @@ class PolicyServiceTest extends TestCase {
     $myClass->policy( $requestMock );    
   }
 
-  public function testWhenRateManagerThrowsExceptionShouldBypassException() {
-    $containerMock = $this->createStub(App\Deps\ContainerInterface::class);
-    $requestMock = $this->createStub(App\Deps\Request::class);
-    $queryMock = $this->createStub(App\Deps\ParameterBag::class);
-    $rateManagerMock = $this->createStub(App\RateManager::class);
+  // public function testWhenRateManagerThrowsExceptionShouldBypassException() {
+  //   $containerMock = $this->createStub(App\Deps\ContainerInterface::class);
+  //   $requestMock = $this->createStub(App\Deps\Request::class);
+  //   $queryMock = $this->createStub(App\Deps\ParameterBag::class);
+  //   $rateManagerMock = $this->createStub(App\RateManager::class);
 
-    $hasMap = [
-      ['rate', true],
-      ['cn', true],
-      ['checkin', true]
-    ];
+  //   $hasMap = [
+  //     ['rate', true],
+  //     ['cn', true],
+  //     ['checkin', true]
+  //   ];
 
-    $getMap = [
-      ['rate', null, 3],
-      ['cn', null, 6],
-      ['checkin', null, '2020-09-28']
-    ];
+  //   $getMap = [
+  //     ['rate', null, 3],
+  //     ['cn', null, 6],
+  //     ['checkin', null, '2020-09-28']
+  //   ];
 
-    $queryMock->method('has')
-       ->will($this->returnValueMap($hasMap));
+  //   $queryMock->method('has')
+  //      ->will($this->returnValueMap($hasMap));
 
-    $requestMock->query = $queryMock;
-    $requestMock->method('get')
-      ->will($this->returnValueMap($getMap));
+  //   $requestMock->query = $queryMock;
+  //   $requestMock->method('get')
+  //     ->will($this->returnValueMap($getMap));
 
-    $rateManagerMock->method('find')
-      ->will($this->throwException(new \Exception("Rate does not found!!", 1014)));
+  //   $rateManagerMock->method('find')
+  //     ->will($this->throwException(new \Exception("Rate does not found!!", 1014)));
       
-    $containerMock->method('get')
-      ->will($this->returnValue($rateManagerMock));
+  //   $containerMock->method('get')
+  //     ->will($this->returnValue($rateManagerMock));
   
-    // Asserts
-    $this->expectException(\Exception::class);
-    $this->expectExceptionMessage('Rate does not found!!');
-    $this->expectExceptionCode(1014);
+  //   // Asserts
+  //   $this->expectException(\Exception::class);
+  //   $this->expectExceptionMessage('Rate does not found!!');
+  //   $this->expectExceptionCode(1014);
 
-    // Act
-    $myClass = new PolicyService($containerMock);
-    $myClass->policy( $requestMock );    
-  }
+  //   // Act
+  //   $myClass = new PolicyService($containerMock);
+  //   $myClass->policy( $requestMock );    
+  // }
 
-  public function testXXXXXX() {
-    $containerMock = $this->createStub(App\Deps\ContainerInterface::class);
-    $requestMock = $this->createStub(App\Deps\Request::class);
-    $queryMock = $this->createStub(App\Deps\ParameterBag::class);
-    $rateManagerMock = $this->createStub(App\RateManager::class);
+  // public function testXXXXXX() {
+  //   $containerMock = $this->createStub(App\Deps\ContainerInterface::class);
+  //   $requestMock = $this->createStub(App\Deps\Request::class);
+  //   $queryMock = $this->createStub(App\Deps\ParameterBag::class);
+  //   $rateManagerMock = $this->createStub(App\RateManager::class);
 
-    $hasMap = [
-      ['rate', true],
-      ['cn', true],
-      ['checkin', true]
-    ];
+  //   $hasMap = [
+  //     ['rate', true],
+  //     ['cn', true],
+  //     ['checkin', true]
+  //   ];
 
-    $getMap = [
-      ['rate', null, 3],
-      ['cn', null, 6],
-      ['checkin', null, '2020-09-28']
-    ];
+  //   $getMap = [
+  //     ['rate', null, 3],
+  //     ['cn', null, 6],
+  //     ['checkin', null, '2020-09-28']
+  //   ];
 
-    $queryMock->method('has')
-       ->will($this->returnValueMap($hasMap));
+  //   $queryMock->method('has')
+  //      ->will($this->returnValueMap($hasMap));
 
-    $requestMock->query = $queryMock;
-    $requestMock->method('get')
-      ->will($this->returnValueMap($getMap));
+  //   $requestMock->query = $queryMock;
+  //   $requestMock->method('get')
+  //     ->will($this->returnValueMap($getMap));
 
-    $rateManagerMock->method('find')
-      ->will($this->throwException(new \Exception("Rate does not found!!", 1014)));
+  //   $rateManagerMock->method('find')
+  //     ->will($this->throwException(new \Exception("Rate does not found!!", 1014)));
       
-    $containerMock->method('get')
-      ->will($this->returnValue($rateManagerMock));
+  //   $containerMock->method('get')
+  //     ->will($this->returnValue($rateManagerMock));
   
-    // Asserts
-    $this->expectException(\Exception::class);
-    $this->expectExceptionMessage('Rate does not found!!');
-    $this->expectExceptionCode(1014);
+  //   // Asserts
+  //   $this->expectException(\Exception::class);
+  //   $this->expectExceptionMessage('Rate does not found!!');
+  //   $this->expectExceptionCode(1014);
 
-    // Act
-    $myClass = new PolicyService($containerMock);
-    $myClass->policy( $requestMock );    
-  }
+  //   // Act
+  //   $myClass = new PolicyService($containerMock);
+  //   $myClass->policy( $requestMock );    
+  // }
 }
