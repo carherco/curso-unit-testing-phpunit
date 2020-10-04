@@ -1,0 +1,61 @@
+# default:
+#   extensions:
+#     Behat\MinkExtension:
+#       base_url:  'https://staging.xxxxxx.com'
+#       sessions:
+#         default:
+#           goutte: ~
+
+# default:
+  # extensions:
+  #   Behat\MinkExtension\Extension:
+  #       selenium2: ~
+
+# default:
+#   extensions:
+#     Behat\MinkExtension\Extension:
+#       chrome: ~
+
+default: 
+  extensions:
+    DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
+    Behat\MinkExtension:
+      base_url: https://en.wikipedia.org/
+      goutte: ~
+      browser_name: chrome
+      default_session: command_line_browser
+      javascript_session: js_enabled_browser
+      sessions:
+        command_line_browser:
+          goutte: ~
+        js_enabled_browser:
+          chrome:
+            api_url: http://localhost:9222
+            validate_certificate: false
+# default:
+#     extensions:
+#         Behat\MinkExtension\Extension:
+#             # Set the base_url to match your environment setup
+#             base_url: http://localhost:8000
+#             javascript_session: chrome
+#             browser_name: 'chrome'
+#             selenium2: ~
+#                  capabilities: { "browserName": "chrome", "browser": "chrome", "version": "62", 'chrome': {'switches':['--no-sandbox', '--headless']}}
+
+# default:
+#   extensions:
+#     Behat\MinkExtension\Extension:
+#       # Set the base_url to match your environment setup
+#       base_url: http://localhost:8000
+#       javascript_session: selenium2
+#       browser_name: 'firefox'
+#       selenium2: ~
+       
+
+  suites:
+    bookings:
+        paths:    [ %paths.base%/features/bookings ]
+        contexts: [ FeaturesContext ]
+    fees:
+        paths:    [ %paths.base%/features/fees ]
+        contexts: [ FeaturesContext ]

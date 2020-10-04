@@ -6,7 +6,12 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.2",
-        "infection/infection": "^0.17.5"
+        "infection/infection": "^0.17.5",
+        "behat/behat": "*",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "dmore/chrome-mink-driver": "^2.7"
     },
     "require": {
         
