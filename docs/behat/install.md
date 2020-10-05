@@ -14,18 +14,23 @@
 > composer require behat/mink-goutte-driver
 ```
 
+GoutteDriver = cURL, 
+Selenium2Driver = Real Browser
+ChromeDriver = Real Browser
 
+Para selenium:
 
 > java -jar selenium-server-standalone-3.141.59.jar -port 4444
 
 > brew install geckodriver
 
 
-(GoutteDriver = cURL, Selenium2Driver = Real Browser)
-
 Para Chrome:
-webdriver-manager clean
-webdriver-manager update
-webdriver-manager start
+
+> webdriver-manager clean
+
+> webdriver-manager update
+
+> webdriver-manager start
 
 > /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222
