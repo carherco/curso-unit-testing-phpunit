@@ -93,9 +93,11 @@ https://docs.behat.org/en/latest/user_guide/writing_scenarios.html#whens
 
 ## Thens
 
-The purpose of Then steps is to observe outcomes. The observations should be related to the business value/benefit in your feature description. The observations should inspect the output of the system (a report, user interface, message, command output) and not something deeply buried inside it (that has no business value and is instead part of the implementation).
+El propósito de los Then es observar que el sistema funciona correctamente. 
 
-While it might be tempting to implement Then steps to just look in the database – resist the temptation. You should only verify output that is observable by the user (or external system). Database data itself is only visible internally to your application, but is then finally exposed by the output of your system in a web browser, on the command-line or an email message.
+Estas observaciones deben estar relacionadas con el valor/beneficio/resultado descrito en la feature.
+
+Deben inspeccionar la salida del sistema (en un informe, en la interfaz del usuario, en un mensaje de correo, en una salida de un comando) y no en lugares internos a los que el usuario no puede acceder (por ejemplo, la base de datos).
 
 https://docs.behat.org/en/latest/user_guide/writing_scenarios.html#whens
 
