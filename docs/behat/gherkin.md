@@ -103,11 +103,11 @@ https://docs.behat.org/en/latest/user_guide/writing_scenarios.html#whens
 
 https://docs.behat.org/en/latest/user_guide/writing_scenarios.html#and-but
 
-## Backgrounds
+## Backgrounds
 
-Backgrounds allows you to add some context to all scenarios in a single feature. 
+Los Backgrounds permiten añadir contexto (setup) a todos los scenearios de una feature.
 
-The background is run before each of your scenarios, but after your BeforeScenario Hooks.
+Los Backgrounds se ejecutan antes de cada escenario, pero después del hook _BeforeScenario_.
 
 ```gherkin
 Feature: Descuentos por residencia en las Islas Canarias
