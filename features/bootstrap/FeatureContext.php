@@ -34,121 +34,121 @@ class FeatureContext /*implements Context*/ extends MinkContext
         $this->session->start();
     }
 
-    // /**
-    //  * @When I log in with an agency
-    //  */
-    // public function iLogInWithAnAgency()
-    // {
-    //     $this->session->visit($this->baseUrl . '/login');
-    //     $page = $this->session->getPage();
-    //     // findField busca por: label, placeholder, id or name 
-    //     $page->findField('username')->setValue('op@------.es'); 
-    //     $page->findField('password')->setValue('123456'); 
-    //     // Busca por: text, title, id, name attribute or alt attribute (for images used inside buttons).
-    //     $page->pressButton('Entrar');
+    /**
+     * @When I log in with an agency
+     */
+    public function iLogInWithAnAgency()
+    {
+        $this->session->visit($this->baseUrl . '/login');
+        $page = $this->session->getPage();
+        // findField busca por: label, placeholder, id or name 
+        $page->findField('username')->setValue('op@------.es'); 
+        $page->findField('password')->setValue('123456'); 
+        // Busca por: text, title, id, name attribute or alt attribute (for images used inside buttons).
+        $page->pressButton('Entrar');
         
-    //     $this->session->wait(2000);
-    //     $page->pressButton('Ok');
-    //     // $page->findById('js-error-button')->click();
-    // }
+        $this->session->wait(2000);
+        $page->pressButton('Ok');
+        // $page->findById('js-error-button')->click();
+    }
 
-    // /**
-    //  * @When I search
-    //  */
-    // public function iSearch()
-    // {
-    //     $searchUrl = '/panel/vuelos-disponibles/agp-mad-20201010-20201020-100-0000-01110-00-2020100410360027';
-    //     $this->session->visit($this->baseUrl . $searchUrl);
-    //     $this->session->wait(12000);
-    //     // $this->waitForThePageToBeLoaded();
-    // }
+    /**
+     * @When I search
+     */
+    public function iSearch()
+    {
+        $searchUrl = '/panel/vuelos-disponibles/agp-mad-20201010-20201020-100-0000-01110-00-2020100410360027';
+        $this->session->visit($this->baseUrl . $searchUrl);
+        $this->session->wait(12000);
+        // $this->waitForThePageToBeLoaded();
+    }
 
-    // /**
-    //  * @When I click Reservar
-    //  */
-    // public function iClickReservar()
-    // {
-    //     $page = $this->session->getPage();
-    //     $reservarButtons = $page->findAll('named', array('button', 'Reservar'));
-    //     $reservarButtons[0]->click();
-    //     $this->session->wait(1000);
+    /**
+     * @When I click Reservar
+     */
+    public function iClickReservar()
+    {
+        $page = $this->session->getPage();
+        $reservarButtons = $page->findAll('named', array('button', 'Reservar'));
+        $reservarButtons[0]->click();
+        $this->session->wait(1000);
  
-    //     // if() 
-    //     // $page->pressButton('Ok');
+        // if() 
+        // $page->pressButton('Ok');
 
-    // }
+    }
 
-    // /**
-    //  * @When I add baggages
-    //  */
-    // public function iAddBaggages()
-    // {
-    //     $page = $this->session->getPage();
-    //     $this->session->wait(1000);
-    //     $baggageSection = $page->find('css', 'div.add-ancillaries h2');
-    //     $baggageSection->click();
-    //     $this->session->wait(1000);
-    //     $checkboxes = $page->findAll('css', '#ancillary-baggage input[type=checkbox]');
-    //     $checkboxes[0]->check();
-    //     $checkboxes[1]->click();
-    // }
+    /**
+     * @When I add baggages
+     */
+    public function iAddBaggages()
+    {
+        $page = $this->session->getPage();
+        $this->session->wait(1000);
+        $baggageSection = $page->find('css', 'div.add-ancillaries h2');
+        $baggageSection->click();
+        $this->session->wait(1000);
+        $checkboxes = $page->findAll('css', '#ancillary-baggage input[type=checkbox]');
+        $checkboxes[0]->check();
+        $checkboxes[1]->click();
+    }
 
-    // /**
-    //  * @Then I should see a total price of :expectedPrice
-    //  */
-    // public function iShouldSeeATotalPriceOf($expectedPrice)
-    // {
-    //     $page = $this->session->getPage();
-    //     $totalPrice = $page->find('css', 'span.precio-desglose-link')->getText();
-    //     Assert::AssertSame($expectedPrice, $totalPrice);
-    // }
+    /**
+     * @Then I should see a total price of :expectedPrice
+     */
+    public function iShouldSeeATotalPriceOf($expectedPrice)
+    {
+        $page = $this->session->getPage();
+        $totalPrice = $page->find('css', 'span.precio-desglose-link')->getText();
+        Assert::AssertSame($expectedPrice, $totalPrice);
+    }
 
-    // /**
-    //  * @Then I should go to url :expectedUrl
-    //  */
-    // public function iShouldGoToUrl($expectedUrl)
-    // {
-    //     $currentUrl = $this->session->getCurrentUrl();
-    //     Assert::assertSame($expectedUrl, $currentUrl);
-    // }
+    /**
+     * @Then I should go to url :expectedUrl
+     */
+    public function iShouldGoToUrl($expectedUrl)
+    {
+        $currentUrl = $this->session->getCurrentUrl();
+        Assert::assertSame($expectedUrl, $currentUrl);
+    }
 
-    // /**
-    //  * @When I visit :url
-    //  */
-    // public function iVisit($url)
-    // {
-    //     $this->session->visit($this->baseUrl . $url);
-    // }
+    /**
+     * @When I visit :url
+     */
+    public function iVisit($url)
+    {
+        $this->session->visit($this->baseUrl . $url);
+    }
 
-    // /**
-    //  * @When I click on link :link
-    //  */
-    // public function iClickOnLink($link)
-    // {
-    //     $this->session->getPage()->clickLink($link);
-    // }
+    /**
+     * @When I click on link :link
+     */
+    public function iClickOnLink($link)
+    {
+        $this->session->getPage()->clickLink($link);
+    }
 
-    // /**
-    //  * @Then I should see text :arg1
-    //  */
-    // public function iShouldSeeText($arg1)
-    // {
-    //     throw new PendingException();
-    // }
+    /**
+     * @Then I should see text :arg1
+     */
+    public function iShouldSeeText($arg1)
+    {
+        throw new PendingException();
+    }
 
-    // /**
-    //  * @When wait :arg1
-    //  */
-    // public function wait($arg1)
-    // {
-    //     $this->session->wait($arg1);
-    // }
+    /**
+     * @When wait :arg1
+     */
+    public function wait($arg1)
+    {
+        $this->session->wait($arg1);
+    }
 
-    // /**
-    //  * @When /^wait for the page to be loaded$/
-    //  */
-    // public function waitForThePageToBeLoaded()
-    // {
-    //     $this->session->wait(20000, "document.readyState === 'complete'");
-    // }
+    /**
+     * @When /^wait for the page to be loaded$/
+     */
+    public function waitForThePageToBeLoaded()
+    {
+        $this->session->wait(20000, "document.readyState === 'complete'");
+    }
 }
