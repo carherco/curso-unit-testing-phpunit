@@ -11,7 +11,7 @@ use Behat\MinkExtension\Context\MinkContext;
  */
 class FeatureContext /*implements Context*/ extends MinkContext
 {
-    private $baseUrl = 'https://staging.xxxxxx.com';
+    private $baseUrl = 'https://staging.------.com';
     /**
      * Initializes context.
      * Every scenario gets its own context object.
@@ -42,7 +42,7 @@ class FeatureContext /*implements Context*/ extends MinkContext
         $this->session->visit($this->baseUrl . '/login');
         $page = $this->session->getPage();
         // findField busca por: label, placeholder, id or name 
-        $page->findField('username')->setValue('op@xxxxxx.es'); 
+        $page->findField('username')->setValue('op@------.es'); 
         $page->findField('password')->setValue('123456'); 
         // Busca por: text, title, id, name attribute or alt attribute (for images used inside buttons).
         $page->pressButton('Entrar');
@@ -59,7 +59,7 @@ class FeatureContext /*implements Context*/ extends MinkContext
     {
         $searchUrl = '/panel/vuelos-disponibles/agp-mad-20201010-20201020-100-0000-01110-00-2020100410360027';
         $this->session->visit($this->baseUrl . $searchUrl);
-        $this->session->wait(7000);
+        $this->session->wait(12000);
         // $this->waitForThePageToBeLoaded();
     }
 
@@ -79,9 +79,9 @@ class FeatureContext /*implements Context*/ extends MinkContext
     }
 
     /**
-     * @When I add :arg1 baggages
+     * @When I add baggages
      */
-    public function iAddBaggages($arg1)
+    public function iAddBaggages()
     {
         $page = $this->session->getPage();
         $this->session->wait(1000);
