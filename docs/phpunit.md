@@ -1,106 +1,58 @@
 # PhpUnit
 
-
 Para escribir tests en PHPUnit necesitamos al menos lo siguiente:
 
-- Importar las Assertions necesarias (org.junit.jupiter.api.Assertions.*)
-- Importar el decorador @Test (org.junit.jupiter.api.Test)
 - Una **Test Class**
 - Un **Test Method**
 
 Ejemplo:
 
-```java
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+```php
+require __DIR__ . '/../vendor/autoload.php';
 
-class HelloWorldTest {
+use PHPUnit\Framework\TestCase;
+use App\AppExtension;
 
-	@Test
-	void testSumPostive() {
-		HelloWorld myclass = new HelloWorld();
-		int output = myclass.sum(7, 15);
-		assertEquals(22, output, "Sum positive values as expected");
-	}
+class AppExtensionTest extends TestCase 
+{
+  public function testSfCalculator() {
+    $myClass = new AppExtension(null);
 
+    $input = 100;
+    $expectedOutput = 21;
+
+    $output = $myClass->sfCalculator($input);
+
+    $this->assertEquals($expectedOutput, $output);
+  }
 }
 ```
 
-Test Class y Test Methods
--------------------------
+## Test Class y Test Methods
 
-**Test Class**: Una clase que contiene al menos un Test Method.
+**Test Class**: Una clase que extiende de PHPUnit\Framework\TestCase y tiene al menos un test method. El nombre de esta clase debe tener el sufijo Test.
 
-Las *Test Class* no pueden ser abstractas y solamente pueden tener un constructor.
+**Test Method**: Cualquier método público que empiece con el prefijo test o que tenga la anotación @Test.
 
-**Test Method**: Cualquier método que tenga una de las siguientes anotaciones: @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, or @TestTemplate.
+**Hooks**: Cualquiera de estos métodos:
 
-**Lifecycle Method**: Cualquier método con una de las siguientes anotaciones @BeforeAll, @AfterAll, @BeforeEach, or @AfterEach.
+- setUpBeforeClass()
+- setUp()
+- assertPreConditions()
+- onNotSuccessfulTest()
+- assertPostConditions()
+- tearDown()
+- tearDownAfterClass()
 
-Los *test methods* y los *lifecycle methods* no pueden ser abstractos y no pueden devolver ningún valor con return.
+## Hooks
 
-Ni las *Test Class* ni los *Test Method* ni los *Lifecycle Method* pueden ser privados.
+- [Hooks](./phpunit_hooks.md)
 
-Ejemplo básico con los 3 elementos:
-
-```java
-import static org.junit.jupiter.api.Assertions.fail;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-
-class StandardTests {
-
-    @BeforeAll
-    static void initAll() {
-    		// Se ejecuta una única vez
-    }
-
-    @BeforeEach
-    void init() {
-    		// Se ejecuta antes de CADA test
-    }
-
-    @Test
-    void succeedingTest() {
-    }
-
-    @Test
-    void failingTest() {
-        fail("a failing test");
-    }
-
-    @Test
-    @Disabled("for demonstration purposes")
-    void skippedTest() {
-        // not executed
-    }
-
-    @AfterEach
-    void tearDown() {
-    		// Se ejecuta después de CADA test
-    }
-
-    @AfterAll
-    static void tearDownAll() {
-    		// Se ejecuta una única vez
-    }
-
-}
-```
-
-Assertions
-----------
+## Assertions
 
 - [Assertions](./assertions.md)
 
-Anotaciones
------------
+## Anotaciones
 
 - [Anotaciones](./anotaciones.md)
 
