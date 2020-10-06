@@ -2,19 +2,19 @@
 
 Para facilitar el trabajo de setup en nuestros tests y sobre todo evitar la duplicación de código, PHPUnit pone a nuestra disposición varios _template methods_ o _hooks_:
 
-1. setup: Esta función se ejecuta justo ANTES DE CADA TEST.
+1. **setup**: Esta función se ejecuta justo ANTES DE CADA TEST.
 
-2. teardown: Esta función se ejecuta justo DESPUÉS DE CADA TEST.
+2. **teardown**: Esta función se ejecuta justo DESPUÉS DE CADA TEST.
 
-3. assertPreCoditions: Esta función se ejecuta justo antes de cada test pero después del setup.
+3. **assertPreCoditions**: Esta función se ejecuta justo antes de cada test pero después del setup.
 
-4. assertPostConditions: Esta función se ejecuta inmediatamente después de cada test pero antes del teardown.
+4. **assertPostConditions**: Esta función se ejecuta inmediatamente después de cada test pero antes del teardown.
 
-5. setupBeforeClass: Esta función se ejecuta UNA ÚNICA VEZ antes de cualquier test incluso antes del setup del primer test. Es la única función ESTÁTICA (static function) de la clase.
+5. **setupBeforeClass**: Esta función se ejecuta UNA ÚNICA VEZ antes de cualquier test incluso antes del setup del primer test. Es la única función ESTÁTICA (static function) de la clase.
 
-6. teardownAfterClass: Esta función se ejecuta UNA ÚNICA VEZ después de que se hayan ejecutado todos los tests y de que se haya ejecutado el último teardown.
+6. **teardownAfterClass**: Esta función se ejecuta UNA ÚNICA VEZ después de que se hayan ejecutado todos los tests y de que se haya ejecutado el último teardown.
 
-7. onNotSuccessfulTest: Esta función se ejecuta cada vez que un test falle.
+7. **onNotSuccessfulTest**: Esta función se ejecuta cada vez que un test falle.
 
 Cuando usemos PHPUnit para tests puramente unitarios, raramente utilizaremos un método distinto del setup().
 
