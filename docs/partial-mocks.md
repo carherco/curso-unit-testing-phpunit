@@ -102,7 +102,7 @@ Aquí es donde entran en juego los denominados "Partial Mocks".
 
 Un partial mock es una clase de la que vamos a mockear solamente una parte. 
 
-## getMockBuilder
+## getMockBuilder
 
 Un partial mock se construye con el método getMockBuilder() de PHPUnit.
 
