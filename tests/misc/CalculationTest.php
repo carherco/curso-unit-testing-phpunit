@@ -1,58 +1,58 @@
 <?php
-require __DIR__ . '/../../vendor/autoload.php';
 
-use App\Misc\Calculation;
+namespace misc;
+
+use App\misc\Calculation;
 use PHPUnit\Framework\TestCase;
 
-class CalculationTest extends TestCase {
+class CalculationTest extends TestCase
+{
+    /**
+     * @test
+     * @dataProvider findMaxData
+     */
+    public function test_findMax(array $inputNumbers, int $expectedMax ): void
+    {
+        $calculation = new Calculation();
+        $max = $calculation->findMax($inputNumbers);
 
-    public function testFindMax(){
-			$c = new Calculation();
-			$input = [1,3,4,2];
-			$output = $c->findMax($input);
-			$this->assertEquals(4, $output);  
-    } 
+        $this->assertSame($expectedMax, $max);
+    }
 
-    public function testFindMaxWhenMaxIsFirstElement(){  
-			$c = new Calculation();
-			$input = [7, 3, 2, -6];
-			$output = $c->findMax($input);
-			$this->assertEquals(7, $output);  
+    public function findMaxData(): array
+    {
+        return [
+            'Con mezcla positivos negativos' => [[-4, 2, -5], 2],
+            'Con positivos' => [[2, 6, 9], 9],
+            'Con repetidos' => [[8, 7, 8], 8],
+            'Con array de un elemento' => [[8], 8],
+            'Con negativos' => [[-2, -6, -9], -2],
+            'Con el mayor es el primero' => [[12, 6, 9], 12],
+            'Con el mayor es el último' => [[12, 6, 19], 19],
+        ];
     }
-	
-    public function testFindMaxWhenMaxIsLastElement(){  
-			$c = new Calculation();
-			$input = [1,3,14,19];
-			$output = $c->findMax($input);
-			$this->assertEquals(19, $output);
-    }
-	
-    public function testFindMaxWhenMaxIsRepeated(){  
-			$c = new Calculation();
-			$input = [14,3,14,9];
-			$output = $c->findMax($input);
-			$this->assertEquals(14, $output);
-    }
-	 
-	public function testFindMaxWithNegativeNumbers(){  
-		$c = new Calculation();
-		$input = [-18,-1,-14,-9];
-		$output = $c->findMax($input);
-		$this->assertEquals(-1, $output);
-	}
-	
-	public function testFindMaxWith1Element() {
-		$c = new Calculation();
-		$input = [3];
-		$output = $c->findMax($input);
-		$this->assertEquals(3, $output);
-	}
-	 
-  // public function testReverseWord(){ 
-	// 	$c = new Calculation(); 
-	// 	$input = "Hola qué tal";
-	//   $actualOutput = $c->reverseWord($input);
-  //   $this->assertEquals("aloH éuq lat", $actualoutput);  
-  // } 
 
+    /**
+     * @test
+     * @dataProvider reverseWordsData
+     */
+    public function test_reverseWords(string $input, string $expected): void
+    {
+        $calculation = new Calculation();
+        $reversed = $calculation->reverseWord($input);
+
+        $this->assertSame($expected, $reversed);
+    }
+
+    public function reverseWordsData(): array
+    {
+        return [
+            'sin caracteres extraños' => ['Hola que tal', 'aloH euq lat'],
+            //'con tilde' => ['Hola qué tal', 'aloH éuq lat'],
+            'con coma' => ['Hola, que tal', 'aloH, euq lat'],
+            'con exclamaciones' => ['¡Hola! que tal', '¡aloH! euq lat'],
+            'con interrogantes' => ['Hola ¿que tal?', 'aloH ¿euq lat?'],
+            //'con todo' => ['¡Hola!, ¿qué tal?', '¡aloH!, ¿éuq lat?'],
+        ];
+    }
 }

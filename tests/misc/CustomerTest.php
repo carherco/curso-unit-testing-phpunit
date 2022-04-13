@@ -1,29 +1,30 @@
 <?php
-require __DIR__ . '/../../vendor/autoload.php';
 
+namespace misc;
+
+use App\misc\Customer;
 use PHPUnit\Framework\TestCase;
-use App\Misc\Customer;
 
-class CustomerTest extends TestCase {
+class CustomerTest extends TestCase
+{
+    public function testCustomerNegativeAge() {
+        $customer = new Customer();
 
-  public function testSetAgeWithPositiveAge() {
-    $myClass = new Customer();
+        // Assert
+        $this->expectException(\LogicException::class);
+        $this->expectExceptionMessage("No puede ser un número negativo");
 
-    // Act
-    $myClass->setAge(21);
+        // Act
+        $customer->setAge(-32);
+    }
 
-    // Assert
-    $this->assertEquals(21, $myClass->getAge());
-  }
+    public function testCustomerPositiveAge() {
+        $customer = new Customer();
 
-  public function testSetAgeWithNegativeAgeThrowsLogicException() {
-    $myClass = new Customer();
+        // Act
+        $customer->setAge(32);
 
-    // Assert
-    $this->expectException(LogicException::class);
-    $this->expectExceptionMessage("No puede ser un número negativo");
-
-    // Act
-    $myClass->setAge(-21);
-  }
+        // Assert
+        $this->assertEquals(32, $customer->getAge());
+    }
 }

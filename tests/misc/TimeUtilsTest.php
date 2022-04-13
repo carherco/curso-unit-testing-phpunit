@@ -1,44 +1,33 @@
 <?php
-require __DIR__ . '/../../vendor/autoload.php';
 
-use App\Misc\TimeUtils;
+namespace misc;
+
+use App\misc\TimeUtils;
+use DateTime;
 use PHPUnit\Framework\TestCase;
 
-class TimeUtilsTest extends TestCase {
+class TimeUtilsTest extends TestCase
+{
+    /**
+     * @test
+     * @dataProvider getTimeOfDayResult
+     */
+    public function testTimeOfTheDayResult(string $expected, DateTime $time): void
+    {
+        $myClass = new TimeUtils();
+        $result = $myClass->getTimeOfDay($time);
 
-  public function testGetTimeOfDayShouldReturnStringNightWhenTimeIsBetween0And6() {
-    $myClass = new TimeUtils();
-    $time = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 03:59:08');
+        $this->assertSame($expected, $result);
+    }
 
-    $output = $myClass->getTimeOfDay($time);
-
-    $this->assertEquals('Night', $output);
-  }
-
-  public function testGetTimeOfDayShouldReturnStringMorningWhenTimeIsBetween6And12() {
-    $myClass = new TimeUtils();
-    $time = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 10:59:08');
-
-    $output = $myClass->getTimeOfDay($time);
-
-    $this->assertEquals('Morning', $output);
-  }
-
-  public function testGetTimeOfDayShouldReturnStringAfternoonWhenTimeIsBetween12And18() {
-    $myClass = new TimeUtils();
-    $time = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 17:59:08');
-
-    $output = $myClass->getTimeOfDay($time);
-
-    $this->assertEquals('Afternoon', $output);
-  }
-
-  public function testGetTimeOfDayShouldReturnStringEveningWhenTimeIsBetween18And24() {
-    $myClass = new TimeUtils();
-    $time = DateTime::createFromFormat('Y-m-d H:i:s', '2020-09-25 23:59:08');
-
-    $output = $myClass->getTimeOfDay($time);
-
-    $this->assertEquals('Evening', $output);
-  }
+    public function getTimeOfDayResult(): array
+    {
+        return [
+            'Caso Night' => ['Night', new DateTime('2022-03-07 00:05:18')],
+            'Caso Morning' => ['Morning', new DateTime('2022-03-07 10:10:18')],
+            'Caso Afternoon' => ['Afternoon', new DateTime('2022-03-07 17:05:18')],
+            'Caso Evening' => ['Evening', new DateTime('2022-03-07 21:05:18')],
+        ];
+    }
 }
+

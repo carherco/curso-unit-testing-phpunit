@@ -5,9 +5,8 @@ use DateTime;
 
 class TimeUtils {
 	
-	public function getTimeOfDay(): string
+	public function getTimeOfDay(DateTime $time)
 	{
-		$time = new DateTime();
 		$hour = $time->format('H');
 
 	    if ($hour >= 0 && $hour < 6)

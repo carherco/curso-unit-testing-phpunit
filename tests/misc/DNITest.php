@@ -1,77 +1,53 @@
 <?php
-require __DIR__ . '/../../vendor/autoload.php';
 
-use App\Misc\DNI;
+namespace misc;
+
+use App\misc\DNI;
+use phpDocumentor\Reflection\Types\Boolean;
 use PHPUnit\Framework\TestCase;
+use function PHPUnit\Framework\assertTrue;
 
-class DNITest extends TestCase {
+class DNITest extends TestCase
+{
+    /**
+     * @test
+     * @dataProvider dniLetterResult
+     */
+    public function test_DNI(string $expected, int $number): void
+    {
+        $dni = new DNI();
+        $dniNumber = $dni->calcularLetra($number);
 
-  // public function testCalcularLetraDNI(){
-  //   $myClass = new DNI();
-  //   $input = 15454424;
-  //   $output = $myClass->calcularLetra($input);
-  //   $this->assertEquals('B', $output);  
-  // } 
+        $this->assertEquals($expected, $dniNumber);
+    }
 
-  // public function testCalcularLetraDNI2(){
-  //   $myClass = new DNI();
-  //   $input = 24391544;
-  //   $output = $myClass->calcularLetra($input);
-  //   $this->assertEquals('K', $output);  
-  // } 
+    public function dniLetterResult(): array
+    {
+        return [
+            'Caso 0' => ['T', 74860124],
+            'Caso 1' => ['R', 74860125],
+            'Caso 2' => ['W', 74860126],
+            'Caso 3' => ['A', 74860127],
+            'Caso 4' => ['G', 74860128],
+            'Caso 5' => ['M', 74860129],
+            'Caso 6' => ['Y', 74860130],
+            'Caso 7' => ['F', 74860131],
+            'Caso 8' => ['P', 74860132],
+            'Caso 9' => ['D', 74860133],
+            'Caso 10' => ['X', 74860134],
+            'Caso 11' => ['B', 74860135],
+            'Caso 12' => ['N', 74860136],
+            'Caso 13' => ['J', 74860137],
+            'Caso 14' => ['Z', 74860138],
+            'Caso 15' => ['S', 74860139],
+            'Caso 16' => ['Q', 74860140],
+            'Caso 17' => ['V', 74860141],
+            'Caso 18' => ['H', 74860142],
+            'Caso 19' => ['L', 74860143],
+            'Caso 20' => ['C', 74860144],
+            'Caso 21' => ['K', 74860145],
+            'Caso 22' => ['E', 74860146],
+        ];
+    }
 
-  // public function testCalcularLetraDNI3(){
-  //   $myClass = new DNI();
-  //   $input = 70878790;
-  //   $output = $myClass->calcularLetra($input);
-  //   $this->assertEquals('N', $output);  
-  // } 
-
-  /**
-   * @dataProvider calcularLetraProvider
-   */
-  public function testCalcularLetra($dni, $expectedOtuput){
-    $myClass = new DNI();
-    $output = $myClass->calcularLetra($dni);
-    $this->assertEquals($expectedOtuput, $output);  
-  } 
-
-  public function calcularLetraProvider()
-  {
-    return [
-      [15454423, 'X'],
-      [15454424, 'B'],
-      [43253425, 'Q'],
-      [24391544, 'K'],
-      [70878790, 'N'],
-      [39696838, 'B'],
-      [23,       'T'], 
-      [10101010, 'P'],
-      [10101020, 'H'],
-      [12345678, 'Z'],
-      [11111116, 'T'],
-      [11111117, 'R'],
-      [11111118, 'W'],
-      [11111119, 'A'],
-      [11111120, 'G'],
-      [11111121, 'M'],
-      [11111122, 'Y'],
-      [11111123, 'F'],
-      [11111124, 'P'],
-      [11111125, 'D'],
-      [11111126, 'X'],
-      [11111127, 'B'],
-      [11111128, 'N'],
-      [11111129, 'J'],
-      [11111130, 'Z'],
-      [11111131, 'S'],
-      [11111132, 'Q'],
-      [11111133, 'V'],
-      [11111134, 'H'],
-      [11111135, 'L'],
-      [11111136, 'C'],
-      [11111137, 'K'],
-      [11111138, 'E']
-    ];
-  }
 }

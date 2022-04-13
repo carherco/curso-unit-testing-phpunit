@@ -4,7 +4,7 @@ namespace  App\misc;
 
 class BackyardSwitcher //implements SwitcherInterface 
 {
-	public function turnOn() {
+    public function turnOn() {
 		// Código que enciende físicamente la bombilla
 	}
 	
