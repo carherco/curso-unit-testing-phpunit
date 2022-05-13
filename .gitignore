@@ -1,2 +1,5 @@
 vendor
 .scannerwork
+coverage
+build
+behat_report.html
