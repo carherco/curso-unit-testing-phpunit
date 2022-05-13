@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Misc;
+namespace App\misc;
 use DateTime;
-//use DateTimeInterface;
 
 class TimeUtils {
 	
-	public function getTimeOfDay($time)
+	public function getTimeOfDay(): string
 	{
-			// $time = new DateTime();
-			$hour = $time->format('H');
+		$time = new DateTime();
+		$hour = $time->format('H');
 
 	    if ($hour >= 0 && $hour < 6)
 	    {
