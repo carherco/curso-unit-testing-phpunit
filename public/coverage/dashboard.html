@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/carlos/mamp/PruebasUnitarias/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/Users/carlos/mamp/PruebasUnitarias/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Action.php.html#7">App\Action</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AgencyManager.php.html#7">App\AgencyManager</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#5">App\AppExtension</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#33">App\AvailPreferenceService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ExternalPaymentBase.php.html#5">App\ExternalPaymentBase</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="IbericaConnector.php.html#5">App\IbericaConnector</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#19">App\PolicyService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#5">App\PricingService</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RateManager.php.html#7">App\RateManager</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RetrieveFlow.php.html#9">App\RetrieveFlow</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#16">App\Deps\MonologLogger</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#19">App\Deps\ParameterBag</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#39">App\Deps\Request</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/MotionDetector.php.html#5">App\misc\MotionDetector</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/SmartHomeControllerTest.php.html#8">App\misc\SmartHomeControllerTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#7">App\Model\Card</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#7">App\Model\PenaltyModel</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PolicyResponseModel.php.html#9">App\Model\PolicyResponseModel</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#10">App\Model\RateModel</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/Calculation.php.html#5">App\misc\Calculation</a></td><td class="text-right">70%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="deps/Request.php.html#39">App\Deps\Request</a></td><td class="text-right">40200</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#16">App\Deps\MonologLogger</a></td><td class="text-right">2450</td></tr>
+       <tr><td><a href="AppExtension.php.html#5">App\AppExtension</a></td><td class="text-right">1722</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#33">App\AvailPreferenceService</a></td><td class="text-right">1482</td></tr>
+       <tr><td><a href="RetrieveFlow.php.html#9">App\RetrieveFlow</a></td><td class="text-right">1260</td></tr>
+       <tr><td><a href="IbericaConnector.php.html#5">App\IbericaConnector</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#19">App\Deps\ParameterBag</a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="PolicyService.php.html#19">App\PolicyService</a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="model/Card.php.html#7">App\Model\Card</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="PricingService.php.html#5">App\PricingService</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="ExternalPaymentBase.php.html#5">App\ExternalPaymentBase</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="RateManager.php.html#7">App\RateManager</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Action.php.html#7">App\Action</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="misc/Calculation.php.html#5">App\misc\Calculation</a></td><td class="text-right">11</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Action.php.html#10"><abbr title="App\Action::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Action.php.html#14"><abbr title="App\Action::addSaldo">addSaldo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AgencyManager.php.html#11"><abbr title="App\AgencyManager::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AgencyManager.php.html#15"><abbr title="App\AgencyManager::addSaldo">addSaldo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#12"><abbr title="App\AppExtension::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#17"><abbr title="App\AppExtension::durationdhm">durationdhm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#29"><abbr title="App\AppExtension::durationdays">durationdays</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#37"><abbr title="App\AppExtension::stringDate">stringDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#43"><abbr title="App\AppExtension::stringDiffDate">stringDiffDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#66"><abbr title="App\AppExtension::getDateTimeNow">getDateTimeNow</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#71"><abbr title="App\AppExtension::onlyCity">onlyCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#77"><abbr title="App\AppExtension::currency">currency</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#93"><abbr title="App\AppExtension::monthSelect">monthSelect</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#99"><abbr title="App\AppExtension::monthValue">monthValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#105"><abbr title="App\AppExtension::paxtype2text">paxtype2text</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#123"><abbr title="App\AppExtension::getPassengersText">getPassengersText</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#144"><abbr title="App\AppExtension::currencyValue">currencyValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#149"><abbr title="App\AppExtension::sfCalculator">sfCalculator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#157"><abbr title="App\AppExtension::_winCrack">_winCrack</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#168"><abbr title="App\AppExtension::getAgent">getAgent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#172"><abbr title="App\AppExtension::getAdmin">getAdmin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AppExtension.php.html#177"><abbr title="App\AppExtension::getFirstSurname">getFirstSurname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#77"><abbr title="App\AvailPreferenceService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#85"><abbr title="App\AvailPreferenceService::setClientId">setClientId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#93"><abbr title="App\AvailPreferenceService::setProviderId">setProviderId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#101"><abbr title="App\AvailPreferenceService::setIata">setIata</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#109"><abbr title="App\AvailPreferenceService::getDepartureDate">getDepartureDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#117"><abbr title="App\AvailPreferenceService::setDepartureDate">setDepartureDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#125"><abbr title="App\AvailPreferenceService::getOrigin">getOrigin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#133"><abbr title="App\AvailPreferenceService::setOrigin">setOrigin</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#141"><abbr title="App\AvailPreferenceService::getDestination">getDestination</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#149"><abbr title="App\AvailPreferenceService::setDestination">setDestination</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#158"><abbr title="App\AvailPreferenceService::apply">apply</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#174"><abbr title="App\AvailPreferenceService::getPreferencesRules">getPreferencesRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#190"><abbr title="App\AvailPreferenceService::applyRules">applyRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#201"><abbr title="App\AvailPreferenceService::applyRules2Transport">applyRules2Transport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#227"><abbr title="App\AvailPreferenceService::isValid">isValid</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="ExternalPaymentBase.php.html#11"><abbr title="App\ExternalPaymentBase::registerPaymentRequest">registerPaymentRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="IbericaConnector.php.html#13"><abbr title="App\IbericaConnector::flightChange">flightChange</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#23"><abbr title="App\PolicyService::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#33"><abbr title="App\PolicyService::policy">policy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#56"><abbr title="App\PolicyService::getRequest">getRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#88"><abbr title="App\PolicyService::renderObject">renderObject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#116"><abbr title="App\PolicyService::createPenaltyNoRefund">createPenaltyNoRefund</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#121"><abbr title="App\PolicyService::createPenaltyNoShow">createPenaltyNoShow</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#126"><abbr title="App\PolicyService::createPenaltyDaysBefore">createPenaltyDaysBefore</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PolicyService.php.html#132"><abbr title="App\PolicyService::createPenalty">createPenalty</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#14"><abbr title="App\PricingService::renderObject">renderObject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#29"><abbr title="App\PricingService::category2Model">category2Model</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#38"><abbr title="App\PricingService::subcategory2Model">subcategory2Model</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#47"><abbr title="App\PricingService::location2Model">location2Model</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#59"><abbr title="App\PricingService::photos2Model">photos2Model</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="PricingService.php.html#72"><abbr title="App\PricingService::getGlobalPath">getGlobalPath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RateManager.php.html#10"><abbr title="App\RateManager::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RateManager.php.html#14"><abbr title="App\RateManager::find">find</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="RetrieveFlow.php.html#16"><abbr title="App\RetrieveFlow::process">process</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#138"><abbr title="App\Deps\MonologLogger::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#146"><abbr title="App\Deps\MonologLogger::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#154"><abbr title="App\Deps\MonologLogger::withName">withName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#165"><abbr title="App\Deps\MonologLogger::pushHandler">pushHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#177"><abbr title="App\Deps\MonologLogger::popHandler">popHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#193"><abbr title="App\Deps\MonologLogger::setHandlers">setHandlers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#206"><abbr title="App\Deps\MonologLogger::getHandlers">getHandlers</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#214"><abbr title="App\Deps\MonologLogger::pushProcessor">pushProcessor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#227"><abbr title="App\Deps\MonologLogger::popProcessor">popProcessor</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#239"><abbr title="App\Deps\MonologLogger::getProcessors">getProcessors</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#261"><abbr title="App\Deps\MonologLogger::useMicrosecondTimestamps">useMicrosecondTimestamps</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#274"><abbr title="App\Deps\MonologLogger::addRecord">addRecord</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#336"><abbr title="App\Deps\MonologLogger::close">close</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#373"><abbr title="App\Deps\MonologLogger::getLevels">getLevels</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#398"><abbr title="App\Deps\MonologLogger::toMonologLevel">toMonologLevel</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#421"><abbr title="App\Deps\MonologLogger::isHandling">isHandling</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#441"><abbr title="App\Deps\MonologLogger::setExceptionHandler">setExceptionHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#448"><abbr title="App\Deps\MonologLogger::getExceptionHandler">getExceptionHandler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#462"><abbr title="App\Deps\MonologLogger::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#477"><abbr title="App\Deps\MonologLogger::debug">debug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#490"><abbr title="App\Deps\MonologLogger::info">info</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#503"><abbr title="App\Deps\MonologLogger::notice">notice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#516"><abbr title="App\Deps\MonologLogger::warning">warning</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#529"><abbr title="App\Deps\MonologLogger::error">error</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#542"><abbr title="App\Deps\MonologLogger::critical">critical</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#555"><abbr title="App\Deps\MonologLogger::alert">alert</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#568"><abbr title="App\Deps\MonologLogger::emergency">emergency</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#576"><abbr title="App\Deps\MonologLogger::setTimezone">setTimezone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#586"><abbr title="App\Deps\MonologLogger::getTimezone">getTimezone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#595"><abbr title="App\Deps\MonologLogger::handleException">handleException</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#26"><abbr title="App\Deps\ParameterBag::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#48"><abbr title="App\Deps\ParameterBag::keys">keys</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#56"><abbr title="App\Deps\ParameterBag::replace">replace</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#64"><abbr title="App\Deps\ParameterBag::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#76"><abbr title="App\Deps\ParameterBag::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#86"><abbr title="App\Deps\ParameterBag::set">set</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#96"><abbr title="App\Deps\ParameterBag::has">has</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#104"><abbr title="App\Deps\ParameterBag::remove">remove</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#114"><abbr title="App\Deps\ParameterBag::getAlpha">getAlpha</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#124"><abbr title="App\Deps\ParameterBag::getAlnum">getAlnum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#134"><abbr title="App\Deps\ParameterBag::getDigits">getDigits</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#145"><abbr title="App\Deps\ParameterBag::getInt">getInt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#155"><abbr title="App\Deps\ParameterBag::getBoolean">getBoolean</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#171"><abbr title="App\Deps\ParameterBag::filter">filter</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#193"><abbr title="App\Deps\ParameterBag::getIterator">getIterator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#203"><abbr title="App\Deps\ParameterBag::count">count</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#254"><abbr title="App\Deps\Request::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#431"><abbr title="App\Deps\Request::setFactory">setFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#498"><abbr title="App\Deps\Request::__clone">__clone</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#514"><abbr title="App\Deps\Request::__toString">__toString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#550"><abbr title="App\Deps\Request::overrideGlobals">overrideGlobals</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#592"><abbr title="App\Deps\Request::setTrustedProxies">setTrustedProxies</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#611"><abbr title="App\Deps\Request::getTrustedProxies">getTrustedProxies</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#621"><abbr title="App\Deps\Request::getTrustedHeaderSet">getTrustedHeaderSet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#633"><abbr title="App\Deps\Request::setTrustedHosts">setTrustedHosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#647"><abbr title="App\Deps\Request::getTrustedHosts">getTrustedHosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#683"><abbr title="App\Deps\Request::enableHttpMethodParameterOverride">enableHttpMethodParameterOverride</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#693"><abbr title="App\Deps\Request::getHttpMethodParameterOverride">getHttpMethodParameterOverride</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#711"><abbr title="App\Deps\Request::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#753"><abbr title="App\Deps\Request::hasPreviousSession">hasPreviousSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#768"><abbr title="App\Deps\Request::hasSession">hasSession</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#781"><abbr title="App\Deps\Request::setSessionFactory">setSessionFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#828"><abbr title="App\Deps\Request::getClientIp">getClientIp</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#840"><abbr title="App\Deps\Request::getScriptName">getScriptName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#859"><abbr title="App\Deps\Request::getPathInfo">getPathInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#880"><abbr title="App\Deps\Request::getBasePath">getBasePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#917"><abbr title="App\Deps\Request::getBaseUrlReal">getBaseUrlReal</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#931"><abbr title="App\Deps\Request::getScheme">getScheme</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#974"><abbr title="App\Deps\Request::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#984"><abbr title="App\Deps\Request::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#994"><abbr title="App\Deps\Request::getUserInfo">getUserInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1013"><abbr title="App\Deps\Request::getHttpHost">getHttpHost</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1030"><abbr title="App\Deps\Request::getRequestUri">getRequestUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1047"><abbr title="App\Deps\Request::getSchemeAndHttpHost">getSchemeAndHttpHost</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1059"><abbr title="App\Deps\Request::getUri">getUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1075"><abbr title="App\Deps\Request::getUriForPath">getUriForPath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1097"><abbr title="App\Deps\Request::getRelativeUriForPath">getRelativeUriForPath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1141"><abbr title="App\Deps\Request::getQueryString">getQueryString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1236"><abbr title="App\Deps\Request::setMethod">setMethod</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1299"><abbr title="App\Deps\Request::getRealMethod">getRealMethod</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1309"><abbr title="App\Deps\Request::getMimeType">getMimeType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1323"><abbr title="App\Deps\Request::getMimeTypes">getMimeTypes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1337"><abbr title="App\Deps\Request::getFormat">getFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1365"><abbr title="App\Deps\Request::setFormat">setFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1387"><abbr title="App\Deps\Request::getRequestFormat">getRequestFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1399"><abbr title="App\Deps\Request::setRequestFormat">setRequestFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1409"><abbr title="App\Deps\Request::getContentType">getContentType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1417"><abbr title="App\Deps\Request::setDefaultLocale">setDefaultLocale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1431"><abbr title="App\Deps\Request::getDefaultLocale">getDefaultLocale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1439"><abbr title="App\Deps\Request::setLocale">setLocale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1449"><abbr title="App\Deps\Request::getLocale">getLocale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1461"><abbr title="App\Deps\Request::isMethod">isMethod</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1473"><abbr title="App\Deps\Request::isMethodSafe">isMethodSafe</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1483"><abbr title="App\Deps\Request::isMethodIdempotent">isMethodIdempotent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1495"><abbr title="App\Deps\Request::isMethodCacheable">isMethodCacheable</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1511"><abbr title="App\Deps\Request::getProtocolVersion">getProtocolVersion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1533"><abbr title="App\Deps\Request::getContent">getContent</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1576"><abbr title="App\Deps\Request::getETags">getETags</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1584"><abbr title="App\Deps\Request::isNoCache">isNoCache</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1597"><abbr title="App\Deps\Request::getPreferredFormat">getPreferredFormat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1619"><abbr title="App\Deps\Request::getPreferredLanguage">getPreferredLanguage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1739"><abbr title="App\Deps\Request::isXmlHttpRequest">isXmlHttpRequest</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1775"><abbr title="App\Deps\Request::prepareRequestUri">prepareRequestUri</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1825"><abbr title="App\Deps\Request::prepareBaseUrl">prepareBaseUrl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1894"><abbr title="App\Deps\Request::prepareBasePath">prepareBasePath</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1920"><abbr title="App\Deps\Request::preparePathInfo">preparePathInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1950"><abbr title="App\Deps\Request::initializeFormats">initializeFormats</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1967"><abbr title="App\Deps\Request::setPhpDefaultLocale">setPhpDefaultLocale</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1984"><abbr title="App\Deps\Request::getUrlencodedPrefix">getUrlencodedPrefix</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="deps/Request.php.html#1999"><abbr title="App\Deps\Request::createRequestFromFactory">createRequestFromFactory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/MotionDetector.php.html#7"><abbr title="App\misc\MotionDetector::detect">detect</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/SmartHomeControllerTest.php.html#12"><abbr title="App\misc\SmartHomeControllerTest::testSiEsNightYSeDetectaMovimientoSeDebeEncenderLaBombilla">testSiEsNightYSeDetectaMovimientoSeDebeEncenderLaBombilla</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/SmartHomeControllerTest.php.html#32"><abbr title="App\misc\SmartHomeControllerTest::testSiEsMorningYSeDetectaMovimientoSeDebeApagarLaBombilla">testSiEsMorningYSeDetectaMovimientoSeDebeApagarLaBombilla</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/SmartHomeControllerTest.php.html#56"><abbr title="App\misc\SmartHomeControllerTest::testIsNightNoMovimientoMenosDeUnMinuto">testIsNightNoMovimientoMenosDeUnMinuto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/SmartHomeControllerTest.php.html#79"><abbr title="App\misc\SmartHomeControllerTest::testIsNightNoMovimientoMasDeUnMinuto">testIsNightNoMovimientoMasDeUnMinuto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#12"><abbr title="App\Model\Card::getExpireDate">getExpireDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#29"><abbr title="App\Model\Card::getExpireMonth">getExpireMonth</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#39"><abbr title="App\Model\Card::setExpireMonth">setExpireMonth</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#49"><abbr title="App\Model\Card::getFullYear">getFullYear</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#59"><abbr title="App\Model\Card::setFullYear">setFullYear</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/Card.php.html#69"><abbr title="App\Model\Card::getYear">getYear</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#45"><abbr title="App\Model\PenaltyModel::setDateFrom">setDateFrom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#48"><abbr title="App\Model\PenaltyModel::getDateFrom">getDateFrom</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#52"><abbr title="App\Model\PenaltyModel::setDateTo">setDateTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#55"><abbr title="App\Model\PenaltyModel::getDateTo">getDateTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#59"><abbr title="App\Model\PenaltyModel::setAmount">setAmount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#62"><abbr title="App\Model\PenaltyModel::getAmount">getAmount</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#66"><abbr title="App\Model\PenaltyModel::setType">setType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PenaltyModel.php.html#69"><abbr title="App\Model\PenaltyModel::getType">getType</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PolicyResponseModel.php.html#16"><abbr title="App\Model\PolicyResponseModel::setRate">setRate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/PolicyResponseModel.php.html#19"><abbr title="App\Model\PolicyResponseModel::getRate">getRate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#77"><abbr title="App\Model\RateModel::setId">setId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#80"><abbr title="App\Model\RateModel::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#84"><abbr title="App\Model\RateModel::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#87"><abbr title="App\Model\RateModel::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#91"><abbr title="App\Model\RateModel::setRelease">setRelease</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#94"><abbr title="App\Model\RateModel::getRelease">getRelease</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#98"><abbr title="App\Model\RateModel::setMinStay">setMinStay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#101"><abbr title="App\Model\RateModel::getMinStay">getMinStay</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#105"><abbr title="App\Model\RateModel::setConditions">setConditions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#108"><abbr title="App\Model\RateModel::getConditions">getConditions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#112"><abbr title="App\Model\RateModel::setRefundable">setRefundable</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#115"><abbr title="App\Model\RateModel::getRefundable">getRefundable</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#119"><abbr title="App\Model\RateModel::setPentalties">setPentalties</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#122"><abbr title="App\Model\RateModel::getPentalties">getPentalties</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="model/RateModel.php.html#125"><abbr title="App\Model\RateModel::addPenalty">addPenalty</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="misc/Calculation.php.html#20"><abbr title="App\misc\Calculation::reverseWord">reverseWord</abbr></a></td><td class="text-right">63%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="RetrieveFlow.php.html#16"><abbr title="App\RetrieveFlow::process">process</abbr></a></td><td class="text-right">1260</td></tr>
+       <tr><td><a href="IbericaConnector.php.html#13"><abbr title="App\IbericaConnector::flightChange">flightChange</abbr></a></td><td class="text-right">506</td></tr>
+       <tr><td><a href="deps/Request.php.html#1825"><abbr title="App\Deps\Request::prepareBaseUrl">prepareBaseUrl</abbr></a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="deps/Request.php.html#1097"><abbr title="App\Deps\Request::getRelativeUriForPath">getRelativeUriForPath</abbr></a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#227"><abbr title="App\AvailPreferenceService::isValid">isValid</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="deps/Request.php.html#1775"><abbr title="App\Deps\Request::prepareRequestUri">prepareRequestUri</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#201"><abbr title="App\AvailPreferenceService::applyRules2Transport">applyRules2Transport</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#274"><abbr title="App\Deps\MonologLogger::addRecord">addRecord</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="ExternalPaymentBase.php.html#11"><abbr title="App\ExternalPaymentBase::registerPaymentRequest">registerPaymentRequest</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="PolicyService.php.html#56"><abbr title="App\PolicyService::getRequest">getRequest</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="deps/Request.php.html#1619"><abbr title="App\Deps\Request::getPreferredLanguage">getPreferredLanguage</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="deps/Request.php.html#1920"><abbr title="App\Deps\Request::preparePathInfo">preparePathInfo</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="model/Card.php.html#12"><abbr title="App\Model\Card::getExpireDate">getExpireDate</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="AppExtension.php.html#123"><abbr title="App\AppExtension::getPassengersText">getPassengersText</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="deps/Request.php.html#1337"><abbr title="App\Deps\Request::getFormat">getFormat</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="deps/Request.php.html#1533"><abbr title="App\Deps\Request::getContent">getContent</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="AppExtension.php.html#43"><abbr title="App\AppExtension::stringDiffDate">stringDiffDate</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="deps/Request.php.html#550"><abbr title="App\Deps\Request::overrideGlobals">overrideGlobals</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="AppExtension.php.html#105"><abbr title="App\AppExtension::paxtype2text">paxtype2text</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#171"><abbr title="App\Deps\ParameterBag::filter">filter</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="deps/Request.php.html#514"><abbr title="App\Deps\Request::__toString">__toString</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="deps/Request.php.html#1013"><abbr title="App\Deps\Request::getHttpHost">getHttpHost</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="deps/Request.php.html#1597"><abbr title="App\Deps\Request::getPreferredFormat">getPreferredFormat</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="AppExtension.php.html#77"><abbr title="App\AppExtension::currency">currency</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="PricingService.php.html#59"><abbr title="App\PricingService::photos2Model">photos2Model</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="deps/Request.php.html#711"><abbr title="App\Deps\Request::get">get</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="deps/Request.php.html#1894"><abbr title="App\Deps\Request::prepareBasePath">prepareBasePath</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="AppExtension.php.html#17"><abbr title="App\AppExtension::durationdhm">durationdhm</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#158"><abbr title="App\AvailPreferenceService::apply">apply</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="RateManager.php.html#14"><abbr title="App\RateManager::find">find</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#138"><abbr title="App\Deps\MonologLogger::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#421"><abbr title="App\Deps\MonologLogger::isHandling">isHandling</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#592"><abbr title="App\Deps\Request::setTrustedProxies">setTrustedProxies</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1309"><abbr title="App\Deps\Request::getMimeType">getMimeType</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1323"><abbr title="App\Deps\Request::getMimeTypes">getMimeTypes</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1365"><abbr title="App\Deps\Request::setFormat">setFormat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1387"><abbr title="App\Deps\Request::getRequestFormat">getRequestFormat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1511"><abbr title="App\Deps\Request::getProtocolVersion">getProtocolVersion</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1967"><abbr title="App\Deps\Request::setPhpDefaultLocale">setPhpDefaultLocale</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1984"><abbr title="App\Deps\Request::getUrlencodedPrefix">getUrlencodedPrefix</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="deps/Request.php.html#1999"><abbr title="App\Deps\Request::createRequestFromFactory">createRequestFromFactory</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="misc/Calculation.php.html#20"><abbr title="App\misc\Calculation::reverseWord">reverseWord</abbr></a></td><td class="text-right">7</td></tr>
+       <tr><td><a href="Action.php.html#14"><abbr title="App\Action::addSaldo">addSaldo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AppExtension.php.html#29"><abbr title="App\AppExtension::durationdays">durationdays</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AppExtension.php.html#157"><abbr title="App\AppExtension::_winCrack">_winCrack</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AppExtension.php.html#177"><abbr title="App\AppExtension::getFirstSurname">getFirstSurname</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="AvailPreferenceService.php.html#190"><abbr title="App\AvailPreferenceService::applyRules">applyRules</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="PolicyService.php.html#88"><abbr title="App\PolicyService::renderObject">renderObject</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#177"><abbr title="App\Deps\MonologLogger::popHandler">popHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#193"><abbr title="App\Deps\MonologLogger::setHandlers">setHandlers</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#227"><abbr title="App\Deps\MonologLogger::popProcessor">popProcessor</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#336"><abbr title="App\Deps\MonologLogger::close">close</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/MonologLogger.php.html#595"><abbr title="App\Deps\MonologLogger::handleException">handleException</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/ParameterBag.php.html#76"><abbr title="App\Deps\ParameterBag::get">get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#753"><abbr title="App\Deps\Request::hasPreviousSession">hasPreviousSession</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#859"><abbr title="App\Deps\Request::getPathInfo">getPathInfo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#880"><abbr title="App\Deps\Request::getBasePath">getBasePath</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#917"><abbr title="App\Deps\Request::getBaseUrlReal">getBaseUrlReal</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#931"><abbr title="App\Deps\Request::getScheme">getScheme</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#994"><abbr title="App\Deps\Request::getUserInfo">getUserInfo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#1030"><abbr title="App\Deps\Request::getRequestUri">getRequestUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#1059"><abbr title="App\Deps\Request::getUri">getUri</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#1141"><abbr title="App\Deps\Request::getQueryString">getQueryString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#1417"><abbr title="App\Deps\Request::setDefaultLocale">setDefaultLocale</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#1449"><abbr title="App\Deps\Request::getLocale">getLocale</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="deps/Request.php.html#1584"><abbr title="App\Deps\Request::isNoCache">isNoCache</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.15</a> using <a href="https://secure.php.net/" target="_top">PHP 8.0.7</a> and <a href="https://phpunit.de/">PHPUnit 9.5.20</a> at Fri Mar 31 6:45:59 UTC 2023.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([19,0,0,0,0,0,0,0,1,0,0,9], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([202,0,0,0,0,0,0,1,0,0,0,43], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,3,"<a href=\"Action.php.html#7\">App\\Action<\/a>"],[0,2,"<a href=\"AgencyManager.php.html#7\">App\\AgencyManager<\/a>"],[0,41,"<a href=\"AppExtension.php.html#5\">App\\AppExtension<\/a>"],[0,38,"<a href=\"AvailPreferenceService.php.html#33\">App\\AvailPreferenceService<\/a>"],[0,8,"<a href=\"ExternalPaymentBase.php.html#5\">App\\ExternalPaymentBase<\/a>"],[0,22,"<a href=\"IbericaConnector.php.html#5\">App\\IbericaConnector<\/a>"],[0,16,"<a href=\"PolicyService.php.html#19\">App\\PolicyService<\/a>"],[0,9,"<a href=\"PricingService.php.html#5\">App\\PricingService<\/a>"],[0,4,"<a href=\"RateManager.php.html#7\">App\\RateManager<\/a>"],[0,35,"<a href=\"RetrieveFlow.php.html#9\">App\\RetrieveFlow<\/a>"],[100,1,"<a href=\"deps\/AppException.php.html#5\">App\\Deps\\AppException<\/a>"],[0,49,"<a href=\"deps\/MonologLogger.php.html#16\">App\\Deps\\MonologLogger<\/a>"],[0,22,"<a href=\"deps\/ParameterBag.php.html#19\">App\\Deps\\ParameterBag<\/a>"],[0,200,"<a href=\"deps\/Request.php.html#39\">App\\Deps\\Request<\/a>"],[100,2,"<a href=\"misc\/BackyardSwitcher.php.html#5\">App\\misc\\BackyardSwitcher<\/a>"],[70.37037037037037,9,"<a href=\"misc\/Calculation.php.html#5\">App\\misc\\Calculation<\/a>"],[100,21,"<a href=\"misc\/Cuenta.php.html#5\">App\\misc\\Cuenta<\/a>"],[100,3,"<a href=\"misc\/Customer.php.html#7\">App\\misc\\Customer<\/a>"],[100,24,"<a href=\"misc\/DNI.php.html#5\">App\\misc\\DNI<\/a>"],[100,1,"<a href=\"misc\/HolaMundo.php.html#5\">App\\misc\\HolaMundo<\/a>"],[0,1,"<a href=\"misc\/MotionDetector.php.html#5\">App\\misc\\MotionDetector<\/a>"],[100,10,"<a href=\"misc\/SmartHomeController.php.html#7\">App\\misc\\SmartHomeController<\/a>"],[0,4,"<a href=\"misc\/SmartHomeControllerTest.php.html#8\">App\\misc\\SmartHomeControllerTest<\/a>"],[100,5,"<a href=\"misc\/TimeUtils.php.html#6\">App\\misc\\TimeUtils<\/a>"],[0,13,"<a href=\"model\/Card.php.html#7\">App\\Model\\Card<\/a>"],[0,8,"<a href=\"model\/PenaltyModel.php.html#7\">App\\Model\\PenaltyModel<\/a>"],[0,2,"<a href=\"model\/PolicyResponseModel.php.html#9\">App\\Model\\PolicyResponseModel<\/a>"],[0,15,"<a href=\"model\/RateModel.php.html#10\">App\\Model\\RateModel<\/a>"],[100,4,"<a href=\"model\/Transport.php.html#5\">App\\Model\\Transport<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Action.php.html#10\">App\\Action::__construct<\/a>"],[0,2,"<a href=\"Action.php.html#14\">App\\Action::addSaldo<\/a>"],[0,1,"<a href=\"AgencyManager.php.html#11\">App\\AgencyManager::__construct<\/a>"],[0,1,"<a href=\"AgencyManager.php.html#15\">App\\AgencyManager::addSaldo<\/a>"],[0,1,"<a href=\"AppExtension.php.html#12\">App\\AppExtension::__construct<\/a>"],[0,3,"<a href=\"AppExtension.php.html#17\">App\\AppExtension::durationdhm<\/a>"],[0,2,"<a href=\"AppExtension.php.html#29\">App\\AppExtension::durationdays<\/a>"],[0,1,"<a href=\"AppExtension.php.html#37\">App\\AppExtension::stringDate<\/a>"],[0,6,"<a href=\"AppExtension.php.html#43\">App\\AppExtension::stringDiffDate<\/a>"],[0,1,"<a href=\"AppExtension.php.html#66\">App\\AppExtension::getDateTimeNow<\/a>"],[0,1,"<a href=\"AppExtension.php.html#71\">App\\AppExtension::onlyCity<\/a>"],[0,4,"<a href=\"AppExtension.php.html#77\">App\\AppExtension::currency<\/a>"],[0,1,"<a href=\"AppExtension.php.html#93\">App\\AppExtension::monthSelect<\/a>"],[0,1,"<a href=\"AppExtension.php.html#99\">App\\AppExtension::monthValue<\/a>"],[0,5,"<a href=\"AppExtension.php.html#105\">App\\AppExtension::paxtype2text<\/a>"],[0,7,"<a href=\"AppExtension.php.html#123\">App\\AppExtension::getPassengersText<\/a>"],[0,1,"<a href=\"AppExtension.php.html#144\">App\\AppExtension::currencyValue<\/a>"],[0,1,"<a href=\"AppExtension.php.html#149\">App\\AppExtension::sfCalculator<\/a>"],[0,2,"<a href=\"AppExtension.php.html#157\">App\\AppExtension::_winCrack<\/a>"],[0,1,"<a href=\"AppExtension.php.html#168\">App\\AppExtension::getAgent<\/a>"],[0,1,"<a href=\"AppExtension.php.html#172\">App\\AppExtension::getAdmin<\/a>"],[0,2,"<a href=\"AppExtension.php.html#177\">App\\AppExtension::getFirstSurname<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#77\">App\\AvailPreferenceService::__construct<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#85\">App\\AvailPreferenceService::setClientId<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#93\">App\\AvailPreferenceService::setProviderId<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#101\">App\\AvailPreferenceService::setIata<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#109\">App\\AvailPreferenceService::getDepartureDate<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#117\">App\\AvailPreferenceService::setDepartureDate<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#125\">App\\AvailPreferenceService::getOrigin<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#133\">App\\AvailPreferenceService::setOrigin<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#141\">App\\AvailPreferenceService::getDestination<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#149\">App\\AvailPreferenceService::setDestination<\/a>"],[0,3,"<a href=\"AvailPreferenceService.php.html#158\">App\\AvailPreferenceService::apply<\/a>"],[0,1,"<a href=\"AvailPreferenceService.php.html#174\">App\\AvailPreferenceService::getPreferencesRules<\/a>"],[0,2,"<a href=\"AvailPreferenceService.php.html#190\">App\\AvailPreferenceService::applyRules<\/a>"],[0,10,"<a href=\"AvailPreferenceService.php.html#201\">App\\AvailPreferenceService::applyRules2Transport<\/a>"],[0,12,"<a href=\"AvailPreferenceService.php.html#227\">App\\AvailPreferenceService::isValid<\/a>"],[0,8,"<a href=\"ExternalPaymentBase.php.html#11\">App\\ExternalPaymentBase::registerPaymentRequest<\/a>"],[0,22,"<a href=\"IbericaConnector.php.html#13\">App\\IbericaConnector::flightChange<\/a>"],[0,1,"<a href=\"PolicyService.php.html#23\">App\\PolicyService::__construct<\/a>"],[0,1,"<a href=\"PolicyService.php.html#33\">App\\PolicyService::policy<\/a>"],[0,8,"<a href=\"PolicyService.php.html#56\">App\\PolicyService::getRequest<\/a>"],[0,2,"<a href=\"PolicyService.php.html#88\">App\\PolicyService::renderObject<\/a>"],[0,1,"<a href=\"PolicyService.php.html#116\">App\\PolicyService::createPenaltyNoRefund<\/a>"],[0,1,"<a href=\"PolicyService.php.html#121\">App\\PolicyService::createPenaltyNoShow<\/a>"],[0,1,"<a href=\"PolicyService.php.html#126\">App\\PolicyService::createPenaltyDaysBefore<\/a>"],[0,1,"<a href=\"PolicyService.php.html#132\">App\\PolicyService::createPenalty<\/a>"],[0,1,"<a href=\"PricingService.php.html#14\">App\\PricingService::renderObject<\/a>"],[0,1,"<a href=\"PricingService.php.html#29\">App\\PricingService::category2Model<\/a>"],[0,1,"<a href=\"PricingService.php.html#38\">App\\PricingService::subcategory2Model<\/a>"],[0,1,"<a href=\"PricingService.php.html#47\">App\\PricingService::location2Model<\/a>"],[0,4,"<a href=\"PricingService.php.html#59\">App\\PricingService::photos2Model<\/a>"],[0,1,"<a href=\"PricingService.php.html#72\">App\\PricingService::getGlobalPath<\/a>"],[0,1,"<a href=\"RateManager.php.html#10\">App\\RateManager::__construct<\/a>"],[0,3,"<a href=\"RateManager.php.html#14\">App\\RateManager::find<\/a>"],[0,35,"<a href=\"RetrieveFlow.php.html#16\">App\\RetrieveFlow::process<\/a>"],[100,1,"<a href=\"deps\/AppException.php.html#7\">App\\Deps\\AppException::info<\/a>"],[0,3,"<a href=\"deps\/MonologLogger.php.html#138\">App\\Deps\\MonologLogger::__construct<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#146\">App\\Deps\\MonologLogger::getName<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#154\">App\\Deps\\MonologLogger::withName<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#165\">App\\Deps\\MonologLogger::pushHandler<\/a>"],[0,2,"<a href=\"deps\/MonologLogger.php.html#177\">App\\Deps\\MonologLogger::popHandler<\/a>"],[0,2,"<a href=\"deps\/MonologLogger.php.html#193\">App\\Deps\\MonologLogger::setHandlers<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#206\">App\\Deps\\MonologLogger::getHandlers<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#214\">App\\Deps\\MonologLogger::pushProcessor<\/a>"],[0,2,"<a href=\"deps\/MonologLogger.php.html#227\">App\\Deps\\MonologLogger::popProcessor<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#239\">App\\Deps\\MonologLogger::getProcessors<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#261\">App\\Deps\\MonologLogger::useMicrosecondTimestamps<\/a>"],[0,9,"<a href=\"deps\/MonologLogger.php.html#274\">App\\Deps\\MonologLogger::addRecord<\/a>"],[0,2,"<a href=\"deps\/MonologLogger.php.html#336\">App\\Deps\\MonologLogger::close<\/a>"],[100,1,"<a href=\"deps\/MonologLogger.php.html#353\">App\\Deps\\MonologLogger::reset<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#373\">App\\Deps\\MonologLogger::getLevels<\/a>"],[100,1,"<a href=\"deps\/MonologLogger.php.html#383\">App\\Deps\\MonologLogger::getLevelName<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#398\">App\\Deps\\MonologLogger::toMonologLevel<\/a>"],[0,3,"<a href=\"deps\/MonologLogger.php.html#421\">App\\Deps\\MonologLogger::isHandling<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#441\">App\\Deps\\MonologLogger::setExceptionHandler<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#448\">App\\Deps\\MonologLogger::getExceptionHandler<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#462\">App\\Deps\\MonologLogger::log<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#477\">App\\Deps\\MonologLogger::debug<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#490\">App\\Deps\\MonologLogger::info<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#503\">App\\Deps\\MonologLogger::notice<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#516\">App\\Deps\\MonologLogger::warning<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#529\">App\\Deps\\MonologLogger::error<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#542\">App\\Deps\\MonologLogger::critical<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#555\">App\\Deps\\MonologLogger::alert<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#568\">App\\Deps\\MonologLogger::emergency<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#576\">App\\Deps\\MonologLogger::setTimezone<\/a>"],[0,1,"<a href=\"deps\/MonologLogger.php.html#586\">App\\Deps\\MonologLogger::getTimezone<\/a>"],[0,2,"<a href=\"deps\/MonologLogger.php.html#595\">App\\Deps\\MonologLogger::handleException<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#26\">App\\Deps\\ParameterBag::__construct<\/a>"],[100,1,"<a href=\"deps\/ParameterBag.php.html#38\">App\\Deps\\ParameterBag::all<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#48\">App\\Deps\\ParameterBag::keys<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#56\">App\\Deps\\ParameterBag::replace<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#64\">App\\Deps\\ParameterBag::add<\/a>"],[0,2,"<a href=\"deps\/ParameterBag.php.html#76\">App\\Deps\\ParameterBag::get<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#86\">App\\Deps\\ParameterBag::set<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#96\">App\\Deps\\ParameterBag::has<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#104\">App\\Deps\\ParameterBag::remove<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#114\">App\\Deps\\ParameterBag::getAlpha<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#124\">App\\Deps\\ParameterBag::getAlnum<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#134\">App\\Deps\\ParameterBag::getDigits<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#145\">App\\Deps\\ParameterBag::getInt<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#155\">App\\Deps\\ParameterBag::getBoolean<\/a>"],[0,5,"<a href=\"deps\/ParameterBag.php.html#171\">App\\Deps\\ParameterBag::filter<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#193\">App\\Deps\\ParameterBag::getIterator<\/a>"],[0,1,"<a href=\"deps\/ParameterBag.php.html#203\">App\\Deps\\ParameterBag::count<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#254\">App\\Deps\\Request::__construct<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#272\">App\\Deps\\Request::initialize<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#300\">App\\Deps\\Request::createFromGlobals<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#332\">App\\Deps\\Request::create<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#431\">App\\Deps\\Request::setFactory<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#448\">App\\Deps\\Request::duplicate<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#498\">App\\Deps\\Request::__clone<\/a>"],[0,5,"<a href=\"deps\/Request.php.html#514\">App\\Deps\\Request::__toString<\/a>"],[0,6,"<a href=\"deps\/Request.php.html#550\">App\\Deps\\Request::overrideGlobals<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#592\">App\\Deps\\Request::setTrustedProxies<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#611\">App\\Deps\\Request::getTrustedProxies<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#621\">App\\Deps\\Request::getTrustedHeaderSet<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#633\">App\\Deps\\Request::setTrustedHosts<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#647\">App\\Deps\\Request::getTrustedHosts<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#660\">App\\Deps\\Request::normalizeQueryString<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#683\">App\\Deps\\Request::enableHttpMethodParameterOverride<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#693\">App\\Deps\\Request::getHttpMethodParameterOverride<\/a>"],[0,4,"<a href=\"deps\/Request.php.html#711\">App\\Deps\\Request::get<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#733\">App\\Deps\\Request::getSession<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#753\">App\\Deps\\Request::hasPreviousSession<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#768\">App\\Deps\\Request::hasSession<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#781\">App\\Deps\\Request::setSessionFactory<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#799\">App\\Deps\\Request::getClientIps<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#828\">App\\Deps\\Request::getClientIp<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#840\">App\\Deps\\Request::getScriptName<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#859\">App\\Deps\\Request::getPathInfo<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#880\">App\\Deps\\Request::getBasePath<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#899\">App\\Deps\\Request::getBaseUrl<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#917\">App\\Deps\\Request::getBaseUrlReal<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#931\">App\\Deps\\Request::getScheme<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#946\">App\\Deps\\Request::getPort<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#974\">App\\Deps\\Request::getUser<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#984\">App\\Deps\\Request::getPassword<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#994\">App\\Deps\\Request::getUserInfo<\/a>"],[0,5,"<a href=\"deps\/Request.php.html#1013\">App\\Deps\\Request::getHttpHost<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#1030\">App\\Deps\\Request::getRequestUri<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1047\">App\\Deps\\Request::getSchemeAndHttpHost<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#1059\">App\\Deps\\Request::getUri<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1075\">App\\Deps\\Request::getUriForPath<\/a>"],[0,14,"<a href=\"deps\/Request.php.html#1097\">App\\Deps\\Request::getRelativeUriForPath<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#1141\">App\\Deps\\Request::getQueryString<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1158\">App\\Deps\\Request::isSecure<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1181\">App\\Deps\\Request::getHost<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1236\">App\\Deps\\Request::setMethod<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1257\">App\\Deps\\Request::getMethod<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1299\">App\\Deps\\Request::getRealMethod<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1309\">App\\Deps\\Request::getMimeType<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1323\">App\\Deps\\Request::getMimeTypes<\/a>"],[0,7,"<a href=\"deps\/Request.php.html#1337\">App\\Deps\\Request::getFormat<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1365\">App\\Deps\\Request::setFormat<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1387\">App\\Deps\\Request::getRequestFormat<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1399\">App\\Deps\\Request::setRequestFormat<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1409\">App\\Deps\\Request::getContentType<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#1417\">App\\Deps\\Request::setDefaultLocale<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1431\">App\\Deps\\Request::getDefaultLocale<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1439\">App\\Deps\\Request::setLocale<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#1449\">App\\Deps\\Request::getLocale<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1461\">App\\Deps\\Request::isMethod<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1473\">App\\Deps\\Request::isMethodSafe<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1483\">App\\Deps\\Request::isMethodIdempotent<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1495\">App\\Deps\\Request::isMethodCacheable<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1511\">App\\Deps\\Request::getProtocolVersion<\/a>"],[0,7,"<a href=\"deps\/Request.php.html#1533\">App\\Deps\\Request::getContent<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1576\">App\\Deps\\Request::getETags<\/a>"],[0,2,"<a href=\"deps\/Request.php.html#1584\">App\\Deps\\Request::isNoCache<\/a>"],[0,5,"<a href=\"deps\/Request.php.html#1597\">App\\Deps\\Request::getPreferredFormat<\/a>"],[0,8,"<a href=\"deps\/Request.php.html#1619\">App\\Deps\\Request::getPreferredLanguage<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1652\">App\\Deps\\Request::getLanguages<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1692\">App\\Deps\\Request::getCharsets<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1706\">App\\Deps\\Request::getEncodings<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#1720\">App\\Deps\\Request::getAcceptableContentTypes<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1739\">App\\Deps\\Request::isXmlHttpRequest<\/a>"],[0,11,"<a href=\"deps\/Request.php.html#1775\">App\\Deps\\Request::prepareRequestUri<\/a>"],[0,18,"<a href=\"deps\/Request.php.html#1825\">App\\Deps\\Request::prepareBaseUrl<\/a>"],[0,4,"<a href=\"deps\/Request.php.html#1894\">App\\Deps\\Request::prepareBasePath<\/a>"],[0,8,"<a href=\"deps\/Request.php.html#1920\">App\\Deps\\Request::preparePathInfo<\/a>"],[0,1,"<a href=\"deps\/Request.php.html#1950\">App\\Deps\\Request::initializeFormats<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1967\">App\\Deps\\Request::setPhpDefaultLocale<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1984\">App\\Deps\\Request::getUrlencodedPrefix<\/a>"],[0,3,"<a href=\"deps\/Request.php.html#1999\">App\\Deps\\Request::createRequestFromFactory<\/a>"],[100,1,"<a href=\"deps\/Request.php.html#2022\">App\\Deps\\Request::isFromTrustedProxy<\/a>"],[100,1,"<a href=\"misc\/BackyardSwitcher.php.html#7\">App\\misc\\BackyardSwitcher::turnOn<\/a>"],[100,1,"<a href=\"misc\/BackyardSwitcher.php.html#11\">App\\misc\\BackyardSwitcher::turnOff<\/a>"],[100,3,"<a href=\"misc\/Calculation.php.html#9\">App\\misc\\Calculation::findMax<\/a>"],[63.63636363636363,6,"<a href=\"misc\/Calculation.php.html#20\">App\\misc\\Calculation::reverseWord<\/a>"],[100,1,"<a href=\"misc\/Cuenta.php.html#9\">App\\misc\\Cuenta::__construct<\/a>"],[100,1,"<a href=\"misc\/Cuenta.php.html#13\">App\\misc\\Cuenta::getSaldo<\/a>"],[100,2,"<a href=\"misc\/Cuenta.php.html#17\">App\\misc\\Cuenta::ingreso<\/a>"],[100,4,"<a href=\"misc\/Cuenta.php.html#24\">App\\misc\\Cuenta::validarCantidadIngresada<\/a>"],[100,2,"<a href=\"misc\/Cuenta.php.html#40\">App\\misc\\Cuenta::retirada<\/a>"],[100,5,"<a href=\"misc\/Cuenta.php.html#47\">App\\misc\\Cuenta::validarCantidadRetirada<\/a>"],[100,2,"<a href=\"misc\/Cuenta.php.html#67\">App\\misc\\Cuenta::transferencia<\/a>"],[100,4,"<a href=\"misc\/Cuenta.php.html#76\">App\\misc\\Cuenta::validarCantidadTransferencia<\/a>"],[100,2,"<a href=\"misc\/Customer.php.html#11\">App\\misc\\Customer::setAge<\/a>"],[100,1,"<a href=\"misc\/Customer.php.html#18\">App\\misc\\Customer::getAge<\/a>"],[100,24,"<a href=\"misc\/DNI.php.html#7\">App\\misc\\DNI::calcularLetra<\/a>"],[100,1,"<a href=\"misc\/HolaMundo.php.html#7\">App\\misc\\HolaMundo::suma<\/a>"],[0,1,"<a href=\"misc\/MotionDetector.php.html#7\">App\\misc\\MotionDetector::detect<\/a>"],[100,1,"<a href=\"misc\/SmartHomeController.php.html#14\">App\\misc\\SmartHomeController::__construct<\/a>"],[100,9,"<a href=\"misc\/SmartHomeController.php.html#20\">App\\misc\\SmartHomeController::actuateLights<\/a>"],[0,1,"<a href=\"misc\/SmartHomeControllerTest.php.html#12\">App\\misc\\SmartHomeControllerTest::testSiEsNightYSeDetectaMovimientoSeDebeEncenderLaBombilla<\/a>"],[0,1,"<a href=\"misc\/SmartHomeControllerTest.php.html#32\">App\\misc\\SmartHomeControllerTest::testSiEsMorningYSeDetectaMovimientoSeDebeApagarLaBombilla<\/a>"],[0,1,"<a href=\"misc\/SmartHomeControllerTest.php.html#56\">App\\misc\\SmartHomeControllerTest::testIsNightNoMovimientoMenosDeUnMinuto<\/a>"],[0,1,"<a href=\"misc\/SmartHomeControllerTest.php.html#79\">App\\misc\\SmartHomeControllerTest::testIsNightNoMovimientoMasDeUnMinuto<\/a>"],[100,5,"<a href=\"misc\/TimeUtils.php.html#8\">App\\misc\\TimeUtils::getTimeOfDay<\/a>"],[0,8,"<a href=\"model\/Card.php.html#12\">App\\Model\\Card::getExpireDate<\/a>"],[0,1,"<a href=\"model\/Card.php.html#29\">App\\Model\\Card::getExpireMonth<\/a>"],[0,1,"<a href=\"model\/Card.php.html#39\">App\\Model\\Card::setExpireMonth<\/a>"],[0,1,"<a href=\"model\/Card.php.html#49\">App\\Model\\Card::getFullYear<\/a>"],[0,1,"<a href=\"model\/Card.php.html#59\">App\\Model\\Card::setFullYear<\/a>"],[0,1,"<a href=\"model\/Card.php.html#69\">App\\Model\\Card::getYear<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#45\">App\\Model\\PenaltyModel::setDateFrom<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#48\">App\\Model\\PenaltyModel::getDateFrom<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#52\">App\\Model\\PenaltyModel::setDateTo<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#55\">App\\Model\\PenaltyModel::getDateTo<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#59\">App\\Model\\PenaltyModel::setAmount<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#62\">App\\Model\\PenaltyModel::getAmount<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#66\">App\\Model\\PenaltyModel::setType<\/a>"],[0,1,"<a href=\"model\/PenaltyModel.php.html#69\">App\\Model\\PenaltyModel::getType<\/a>"],[0,1,"<a href=\"model\/PolicyResponseModel.php.html#16\">App\\Model\\PolicyResponseModel::setRate<\/a>"],[0,1,"<a href=\"model\/PolicyResponseModel.php.html#19\">App\\Model\\PolicyResponseModel::getRate<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#77\">App\\Model\\RateModel::setId<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#80\">App\\Model\\RateModel::getId<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#84\">App\\Model\\RateModel::setName<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#87\">App\\Model\\RateModel::getName<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#91\">App\\Model\\RateModel::setRelease<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#94\">App\\Model\\RateModel::getRelease<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#98\">App\\Model\\RateModel::setMinStay<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#101\">App\\Model\\RateModel::getMinStay<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#105\">App\\Model\\RateModel::setConditions<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#108\">App\\Model\\RateModel::getConditions<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#112\">App\\Model\\RateModel::setRefundable<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#115\">App\\Model\\RateModel::getRefundable<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#119\">App\\Model\\RateModel::setPentalties<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#122\">App\\Model\\RateModel::getPentalties<\/a>"],[0,1,"<a href=\"model\/RateModel.php.html#125\">App\\Model\\RateModel::addPenalty<\/a>"],[100,1,"<a href=\"model\/Transport.php.html#6\">App\\Model\\Transport::addHighLightMargin<\/a>"],[100,1,"<a href=\"model\/Transport.php.html#10\">App\\Model\\Transport::checkTariff<\/a>"],[100,1,"<a href=\"model\/Transport.php.html#14\">App\\Model\\Transport::checkClass<\/a>"],[100,1,"<a href=\"model\/Transport.php.html#18\">App\\Model\\Transport::checkAirlines<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

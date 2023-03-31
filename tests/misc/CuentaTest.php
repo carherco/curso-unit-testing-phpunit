@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
 
-use App\Misc\Cuenta;
+use App\misc\Cuenta;
 use PHPUnit\Framework\TestCase;
 
 
@@ -46,7 +46,12 @@ class CuentaTest extends TestCase
     {
         $c = new Cuenta();
         $c->ingreso(100);
+
+
         $c->ingreso(3000);
+
+
+
         $this->assertEquals(3100, $c->getSaldo());
     }
     
